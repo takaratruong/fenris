@@ -1,0 +1,199 @@
+{
+  "meta": {
+    "lastTouchedVersion": "2026.3.28",
+    "lastTouchedAt": "2026-03-31T17:01:40.937Z"
+  },
+  "wizard": {
+    "lastRunAt": "2026-03-31T08:53:16.772Z",
+    "lastRunVersion": "2026.3.28",
+    "lastRunCommand": "onboard",
+    "lastRunMode": "local"
+  },
+  "auth": "***REDACTED***",
+  "agents": {
+    "defaults": {
+      "model": {
+        "primary": "anthropic/claude-sonnet-4-6"
+      },
+      "models": {
+        "anthropic/claude-sonnet-4-6": {}
+      },
+      "workspace": "/home/takaraet/.openclaw/workspace",
+      "contextPruning": {
+        "mode": "cache-ttl",
+        "ttl": "1h"
+      },
+      "compaction": {
+        "mode": "safeguard"
+      },
+      "heartbeat": {
+        "every": "1h"
+      },
+      "maxConcurrent": 4,
+      "subagents": {
+        "maxConcurrent": 8
+      }
+    }
+  },
+  "tools": {
+    "profile": "coding",
+    "web": {
+      "search": {
+        "enabled": true,
+        "provider": "duckduckgo"
+      }
+    }
+  },
+  "messages": {
+    "ackReactionScope": "group-mentions"
+  },
+  "commands": {
+    "native": "auto",
+    "nativeSkills": "auto",
+    "restart": true,
+    "ownerDisplay": "raw"
+  },
+  "session": {
+    "dmScope": "per-channel-peer",
+    "reset": {
+      "mode": "idle",
+      "idleMinutes": 10080
+    }
+  },
+  "memory": {
+    "backend": "qmd",
+    "citations": "auto",
+    "qmd": {
+      "includeDefaultMemory": true,
+      "sessions": {
+        "enabled": true
+      },
+      "update": {
+        "interval": "5m",
+        "debounceMs": 15000,
+        "onBoot": true
+      },
+      "limits": {
+        "maxResults": 8,
+        "timeoutMs": 8000
+      },
+      "paths": [],
+      "scope": {
+        "default": "deny",
+        "rules": [
+          {
+            "action": "allow",
+            "match": {
+              "chatType": "direct"
+            }
+          },
+          {
+            "action": "allow",
+            "match": {
+              "channel": "discord"
+            }
+          }
+        ]
+      },
+      "command": "/home/takaraet/.bun/bin/qmd"
+    }
+  },
+  "hooks": {
+    "internal": {
+      "enabled": true,
+      "entries": {
+        "boot-md": {
+          "enabled": true
+        },
+        "bootstrap-extra-files": {
+          "enabled": true
+        },
+        "command-logger": {
+          "enabled": true
+        },
+        "session-memory": {
+          "enabled": true
+        }
+      }
+    }
+  },
+  "channels": {
+    "discord": {
+      "enabled": true,
+      "token": "***REDACTED***",
+      "groupPolicy": "allowlist",
+      "streaming": "off",
+      "guilds": {
+        "1487347622707724359": {
+          "requireMention": true,
+          "users": [
+            "158790414243987456"
+          ]
+        },
+        "1486593631379787878": {
+          "requireMention": true,
+          "users": [
+            "158790414243987456"
+          ]
+        }
+      }
+    }
+  },
+  "gateway": {
+    "port": 18789,
+    "mode": "local",
+    "bind": "loopback",
+    "controlUi": {
+      "allowInsecureAuth": "***REDACTED***"
+    },
+    "auth": "***REDACTED***",
+    "tailscale": {
+      "mode": "off",
+      "resetOnExit": false
+    }
+  },
+  "skills": {
+    "install": {
+      "nodeManager": "npm"
+    }
+  },
+  "plugins": {
+    "slots": {
+      "contextEngine": "lossless-claw"
+    },
+    "entries": {
+      "duckduckgo": {
+        "enabled": true,
+        "config": {}
+      },
+      "lossless-claw": {
+        "enabled": true,
+        "config": {
+          "freshTailCount": 4,
+          "contextThreshold": 0.075,
+          "incrementalMaxDepth": 1,
+          "summaryModel": "anthropic/claude-haiku-4-5",
+          "expansionModel": "anthropic/claude-haiku-4-5",
+          "ignoreSessionPatterns": [
+            "agent:*:cron:**"
+          ]
+        }
+      }
+    },
+    "installs": {
+      "lossless-claw": {
+        "source": "npm",
+        "spec": "@martian-engineering/lossless-claw",
+        "installPath": "/home/takaraet/.openclaw/extensions/lossless-claw",
+        "version": "0.5.2",
+        "resolvedName": "@martian-engineering/lossless-claw",
+        "resolvedVersion": "0.5.2",
+        "resolvedSpec": "@martian-engineering/lossless-claw@0.5.2",
+        "integrity": "sha512-z1XP+czeRyyB31Mb3W++kXlldTisi9Ttqh25ggrm7rGMqBGpWxJ+sVAMGAHdKgSZTVmj8wOOVyMfEW9IHI6K+g==",
+        "shasum": "246d1a75bda9140ae47e57a0a987d0f8ac25abe4",
+        "resolvedAt": "2026-03-31T17:01:24.699Z",
+        "installedAt": "2026-03-31T17:01:39.806Z"
+      }
+    }
+  }
+}

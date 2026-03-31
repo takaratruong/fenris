@@ -1,0 +1,65 @@
+{
+  "version": 1,
+  "skills": {
+    "agent-teams-simplify-and-harden": {
+      "source": "pskoett/pskoett-ai-skills",
+      "sourceType": "github",
+      "computedHash": "0859c91a14824db504129c56db17c283d02a4fda9569ce6953cd3fbf2617102c"
+    },
+    "context-surfing": {
+      "source": "pskoett/pskoett-ai-skills",
+      "sourceType": "github",
+      "computedHash": "5c070dc647311cb9f89f1c5d785a3e10aec2c11b13a03f806ef96a4d349ef176"
+    },
+    "dx-data-navigator": {
+      "source": "pskoett/pskoett-ai-skills",
+      "sourceType": "github",
+      "computedHash": "f8a7e7d321bbdba3d509423cfbcd72af47510a4c33831cbc6585bb684a878507"
+    },
+    "intent-framed-agent": {
+      "source": "pskoett/pskoett-ai-skills",
+      "sourceType": "github",
+      "computedHash": "0f5b9fdcd5df13fdbf961471bd7deea22b10b972db992803884cf55c819d117a"
+    },
+    "mcp-builder": {
+      "source": "pskoett/pskoett-ai-skills",
+      "sourceType": "github",
+      "computedHash": "2cb6f4cdba41fbed00091bcf30848912d2f34528a60a0d926ec4f4d72660076c"
+    },
+    "plan-interview": {
+      "source": "pskoett/pskoett-ai-skills",
+      "sourceType": "github",
+      "computedHash": "d85ffedf4daa2f6edf983fc86443ffd2cf13a0efd9218387047f6af0561230e3"
+    },
+    "self-improvement": {
+      "source": "pskoett/pskoett-ai-skills",
+      "sourceType": "github",
+      "computedHash": "f402e68f8e6124402690f1382874c262f237e1d82301077bfaa014ec94c7e35b"
+    },
+    "self-improvement-ci": {
+      "source": "pskoett/pskoett-ai-skills",
+      "sourceType": "github",
+      "computedHash": "7baceb196b5a1580da3c4406afe2b249542dce4444149770111484cada74902e"
+    },
+    "simplify-and-harden": {
+      "source": "pskoett/pskoett-ai-skills",
+      "sourceType": "github",
+      "computedHash": "04c7c7720909b8a88846b6a825e61397ec3740e6b015b9ac94a95d2a96f7c6f6"
+    },
+    "simplify-and-harden-ci": {
+      "source": "pskoett/pskoett-ai-skills",
+      "sourceType": "github",
+      "computedHash": "8cc239127631e006e893c42ea6d418bc3c9c5936362d377a2e7fd752947de5f4"
+    },
+    "skill-creator": {
+      "source": "pskoett/pskoett-ai-skills",
+      "sourceType": "github",
+      "computedHash": "2028cdd532879ff015592e905a80ba3e145a518354a7effc3ef5c98190d09ccb"
+    },
+    "skill-pipeline": {
+      "source": "pskoett/pskoett-ai-skills",
+      "sourceType": "github",
+      "computedHash": "5edb06b1d7a6810de058944af84f6ebeae74859d9730874ad65386226abb2723"
+    }
+  }
+}
