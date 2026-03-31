@@ -1,7 +1,7 @@
 {
   "meta": {
     "lastTouchedVersion": "2026.3.24",
-    "lastTouchedAt": "2026-03-31T00:47:42.578Z"
+    "lastTouchedAt": "2026-03-31T01:40:53.916Z"
   },
   "wizard": {
     "lastRunAt": "2026-03-30T17:54:08.099Z",
@@ -12,6 +12,7 @@
   "agents": {
     "defaults": {
       "model": "amazon-bedrock/us.anthropic.claude-opus-4-5-20251101-v1:0",
+      "contextTokens": 80000,
       "memorySearch": {
         "enabled": false
       },
@@ -32,14 +33,10 @@
   "channels": {
     "discord": {
       "enabled": true,
-      "token": {
-        "source": "env",
-        "provider": "default",
-        "id": "DISCORD_BOT_TOKEN"
-      },
+      "token": "[REDACTED]",
       "groupPolicy": "open",
-      "historyLimit": 20,
-      "dmHistoryLimit": 20,
+      "historyLimit": 10,
+      "dmHistoryLimit": 10,
       "streaming": "off",
       "dm": {
         "allowFrom": [
@@ -57,7 +54,7 @@
     "mode": "local",
     "auth": {
       "mode": "token",
-      "token": "<REDACTED>"
+      "token": "[REDACTED]"
     }
   }
 }
