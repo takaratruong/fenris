@@ -1,0 +1,65 @@
+{
+  "meta": {
+    "lastTouchedVersion": "2026.3.24",
+    "lastTouchedAt": "2026-03-31T07:41:17.841Z"
+  },
+  "wizard": {
+    "lastRunAt": "2026-03-30T17:54:08.099Z",
+    "lastRunVersion": "2026.3.24",
+    "lastRunCommand": "doctor",
+    "lastRunMode": "local"
+  },
+  "agents": {
+    "defaults": {
+      "model": {
+        "primary": "amazon-bedrock/us.anthropic.claude-opus-4-5-20251101-v1:0",
+        "fallbacks": []
+      },
+      "models": {
+        "amazon-bedrock/us.anthropic.claude-opus-4-5-20251101-v1:0": {}
+      },
+      "contextTokens": 100000,
+      "memorySearch": {
+        "enabled": false
+      },
+      "compaction": {
+        "mode": "default",
+        "keepRecentTokens": 20000,
+        "maxHistoryShare": 0.3,
+        "recentTurnsPreserve": 5
+      }
+    }
+  },
+  "tools": {},
+  "commands": {
+    "native": "auto",
+    "nativeSkills": "auto",
+    "restart": true,
+    "ownerDisplay": "raw"
+  },
+  "channels": {
+    "discord": {
+      "enabled": true,
+      "token": "__REDACTED__",
+      "groupPolicy": "open",
+      "historyLimit": 10,
+      "dmHistoryLimit": 10,
+      "streaming": "off",
+      "dm": {
+        "allowFrom": ["158790414243987456"]
+      },
+      "guilds": {
+        "1488245505468141608": {
+          "requireMention": false
+        }
+      }
+    }
+  },
+  "gateway": {
+    "mode": "local",
+    "auth": {
+      "mode": "token",
+      "token": "__REDACTED__"
+    }
+  }
+}

@@ -1,7 +1,5 @@
-# HEARTBEAT.md Template
+# HEARTBEAT.md
 
-```markdown
-# Keep this file empty (or with only comments) to skip heartbeat API calls.
-
-# Add tasks below when you want the agent to check something periodically.
-```
+## Periodic Checks
+- [ ] Check active research threads (motion-dream, etc.) — continue if stalled
+- [ ] Review any pending questions I asked >5 min ago — make a call and proceed
