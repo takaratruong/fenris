@@ -2,15 +2,15 @@
 
 Active working memory — the WAL (Write-Ahead Log) target.
 
-**Last Updated:** 2026-03-31 16:52 UTC
+**Last Updated:** 2026-04-01 10:50 UTC
 
 ---
 
 ## Current Task
-Proactive-self-improving-agent skill setup complete. Infrastructure in place.
+Motion-dream research concluded — reached practical limits of walking video for novel view synthesis.
 
 ## Active Threads
-- **#motion-dream** (channel 1488418035575296241) — Said "continuing with MASt3R on 120 frames" but haven't actually started the work yet. Has recurring cron (job id: 2f0f86f0-b7a8-4ad1-8bf5-ac792be36aa2) checking every 5 min.
+- **#motion-dream** (channel 1488418035575296241) — PARKED. Made the call: accuracy > consistency for robotics training data. 60-frame 3DGS model is the deliverable (~10cm novel view range). ViewCrafter explored but wrong tool for ground-truth training data. Posted wrap-up at 10:50 AM.
 
 ## Decisions Made
 - Merge skill patterns into existing files rather than replacing
