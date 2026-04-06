@@ -18,13 +18,13 @@
       "models": {
         "amazon-bedrock/us.anthropic.claude-opus-4-5-20251101-v1:0": {}
       },
-      "contextTokens": "[REDACTED]",
+      "contextTokens": 100000,
       "memorySearch": {
         "enabled": false
       },
       "compaction": {
         "mode": "default",
-        "keepRecentTokens": "[REDACTED]",
+        "keepRecentTokens": 20000,
         "maxHistoryShare": 0.3,
         "recentTurnsPreserve": 5
       }
@@ -40,7 +40,11 @@
   "channels": {
     "discord": {
       "enabled": true,
-      "token": "[REDACTED]",
+      "token": {
+        "source": "env",
+        "provider": "default",
+        "id": "DISCORD_BOT_TOKEN"
+      },
       "groupPolicy": "open",
       "historyLimit": 10,
       "dmHistoryLimit": 10,
