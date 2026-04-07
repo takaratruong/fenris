@@ -1,0 +1,18 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+
+# Binary outputs (regenerable from scripts)
+*.png
+*.jpg
+*.jpeg
+*.mp4
+*.ply
+*.splat
+*.zip
+
+# Temp/generated
+video_frames/
