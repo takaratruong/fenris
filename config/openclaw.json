@@ -43,7 +43,7 @@
       "token": {
         "source": "env",
         "provider": "default",
-        "id": "REDACTED"
+        "id": "DISCORD_BOT_TOKEN"
       },
       "groupPolicy": "open",
       "historyLimit": 10,

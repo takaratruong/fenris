@@ -16,3 +16,10 @@ venv/
 
 # Temp/generated
 video_frames/
+
+# Large dataset files (download separately)
+sage_sample/0001_839920/
+sage_sample/InteriorGS_usdz/
+sage_sample/collision/
+sage_sample/inpaint_output/
+sage_sample/*.ply
