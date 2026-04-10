@@ -1,6 +1,6 @@
 {
   "index_version": "1.0.0",
-  "last_updated": "2026-04-10T10:52:00Z",
+  "last_updated": "2026-04-10T11:16:00Z",
   "lane": "research",
   "artifacts": [
     {
@@ -35,11 +35,22 @@
       "created_at": "2026-04-10T10:52:00Z",
       "task_id": "tsk_b58bafa753d7",
       "thread_id": "thr_3ac4a4987fa7"
+    },
+    {
+      "artifact_id": "art_rs_004_contention_synthesis",
+      "type": "research_synthesis",
+      "title": "SQLite Contention Pattern Comparison and Recommendations",
+      "tags": ["sqlite", "contention", "write-queue", "transactions", "wal", "synthesis"],
+      "visibility": "cross-lane",
+      "path": "artifacts/art_rs_004_contention_synthesis.json",
+      "created_at": "2026-04-10T11:16:00Z",
+      "task_id": "tsk_e5da06d553b4",
+      "thread_id": "thr_3ac4a4987fa7"
     }
   ],
   "schema": {
     "artifact_id": "string (unique, format: art_{lane}_{seq}_{slug})",
-    "artifact_type": "enum: research_summary | evidence_collection | claim_support | literature_review | benchmark_data",
+    "artifact_type": "enum: research_summary | evidence_collection | claim_support | literature_review | benchmark_data | research_synthesis",
     "visibility": "enum: lane-local | cross-lane | public",
     "tags": "string[] (for discovery)",
     "cross_lane_hooks": "object (lane -> relevance description)"

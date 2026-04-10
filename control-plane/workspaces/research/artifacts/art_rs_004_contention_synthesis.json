@@ -1,0 +1,142 @@
+{
+  "artifact_id": "art_rs_004_contention_synthesis",
+  "type": "research_synthesis",
+  "title": "SQLite Contention Pattern Comparison and Recommendations",
+  "created_at": "2026-04-10T11:16:00Z",
+  "task_id": "tsk_e5da06d553b4",
+  "thread_id": "thr_3ac4a4987fa7",
+  "tags": ["sqlite", "contention", "write-queue", "transactions", "wal", "synthesis"],
+  "visibility": "cross-lane",
+  
+  "inputs": {
+    "lane_a": {
+      "pattern": "writer_queueing",
+      "task_id": "tsk_a4aad1e5b030",
+      "artifacts": ["write_queue_benchmark/results.json", "wal_mode_research.json"]
+    },
+    "lane_b": {
+      "pattern": "shorter_transactions",
+      "task_id": "tsk_b58bafa753d7",
+      "artifacts": ["art_rs_003_shorter_transaction_patterns.json"]
+    }
+  },
+  
+  "comparison": {
+    "effectiveness": {
+      "write_queue": {
+        "sqlite_busy_elimination": "100%",
+        "throughput_improvement": "25x (286 → 7284 writes/sec)",
+        "p99_improvement": "100x (2161ms → 21ms)",
+        "measured": true
+      },
+      "shorter_transactions": {
+        "contention_reduction": "25-50% estimated",
+        "sqlite_busy_elimination": "no (reduces, not eliminates)",
+        "measured": false
+      },
+      "winner": "write_queue"
+    },
+    
+    "complexity": {
+      "write_queue": {
+        "initial_effort_hours": "8-16",
+        "code_locality": "centralized",
+        "maintenance": "low",
+        "bug_risk": "low"
+      },
+      "shorter_transactions": {
+        "initial_effort_hours": "15-25",
+        "code_locality": "distributed",
+        "maintenance": "medium",
+        "bug_risk": "medium-high"
+      },
+      "winner": "write_queue (lower ongoing complexity)"
+    },
+    
+    "throughput_latency": {
+      "write_queue": {
+        "single_write_overhead_ms": "10-15",
+        "concurrent_100_p99_ms": 21.4,
+        "throughput_writes_sec": 7284
+      },
+      "shorter_transactions": {
+        "single_write_overhead_ms": 0,
+        "concurrent_100_p99_ms": "variable (retry-dependent)",
+        "throughput_writes_sec": "~350 estimated"
+      },
+      "verdict": "write_queue better under load, shorter_txns better for single isolated writes"
+    }
+  },
+  
+  "interaction": {
+    "combinable": true,
+    "synergies": [
+      "WAL mode benefits both patterns",
+      "Shorter txn patterns improve queue processing speed",
+      "Hybrid routing: queue for bulk, direct for single",
+      "BEGIN IMMEDIATE reduces failed attempts in both paths"
+    ],
+    "conflicts": "none fundamental",
+    "architecture": "hybrid (route by operation type)"
+  },
+  
+  "recommendation": {
+    "summary": "Adopt all three patterns in combination",
+    "phases": [
+      {
+        "phase": 1,
+        "name": "Foundation",
+        "pattern": "WAL mode",
+        "priority": "critical",
+        "effort_hours": 2,
+        "impact": "immediate concurrency improvement"
+      },
+      {
+        "phase": 2,
+        "name": "Quick wins",
+        "pattern": "BEGIN IMMEDIATE + prepare-execute separation",
+        "priority": "high",
+        "effort_hours": "4-6",
+        "impact": "20-30% contention reduction"
+      },
+      {
+        "phase": 3,
+        "name": "High-contention path",
+        "pattern": "Write queue for bulk operations",
+        "priority": "high",
+        "effort_hours": "8-16",
+        "impact": "eliminates SQLITE_BUSY for bulk"
+      }
+    ],
+    "not_recommended": [
+      "Aggressive transaction splitting (risk > benefit)",
+      "Deferred constraints (minimal benefit for control-plane)"
+    ]
+  },
+  
+  "routing_matrix": {
+    "single_task_update": "direct_write_shorter_txn",
+    "thread_belief_update": "direct_write_shorter_txn",
+    "bulk_claim_evidence": "write_queue",
+    "high_concurrency_bursts": "write_queue",
+    "realtime_ui_updates": "direct_write_shorter_txn"
+  },
+  
+  "expected_outcomes": {
+    "sqlite_busy_rate": "0% for bulk, <5% for direct",
+    "throughput_ceiling": "7000+ writes/sec",
+    "p99_latency_ms": "~21 (bulk) / ~5-15 (single)",
+    "implementation_total_hours": "14-24"
+  },
+  
+  "sources": [
+    "art_rs_003_shorter_transaction_patterns.json",
+    "wal_mode_research.json",
+    "write_queue_benchmark/results.json",
+    "wal-benchmark/results.json",
+    "wal-benchmark/results2.json",
+    "wal-benchmark/results3.json"
+  ],
+  
+  "detailed_report": "task_tsk_e5da06d553b4_contention_synthesis.md"
+}

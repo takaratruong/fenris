@@ -1,0 +1,35 @@
+{
+  "test_config": {
+    "num_writers": 100,
+    "duration_sec": 60,
+    "db_path": "/tmp/writequeue_bench_cwd4j3gf/stress_test.db"
+  },
+  "summary": {
+    "total_writes_attempted": 437435,
+    "total_writes_succeeded": 437435,
+    "total_writes_failed": 0,
+    "success_rate": 1.0,
+    "throughput_writes_per_sec": 7283.511713498668,
+    "elapsed_sec": 60.05825448036194,
+    "sqlite_busy_count": 0
+  },
+  "latency_ms": {
+    "min": 8.39376449584961,
+    "avg": 12.548749410106101,
+    "p50": 11.05356216430664,
+    "p95": 20.347118377685547,
+    "p99": 21.436452865600586,
+    "max": 26.031017303466797
+  },
+  "queue_metrics": {
+    "writes_completed": 437435,
+    "writes_failed": 0,
+    "busy_count": 0,
+    "avg_write_time_ms": 0.12465359130787518,
+    "queue_size": 0
+  },
+  "verdict": {
+    "p99_target_1000ms": "PASS",
+    "p99_actual_ms": 21.436452865600586
+  }
+}

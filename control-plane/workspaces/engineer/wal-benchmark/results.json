@@ -1,0 +1,30 @@
+{
+  "config": {
+    "DB_PATH": "/home/ubuntu/.openclaw/workspace/control-plane/workspaces/engineer/wal-benchmark/benchmark.db",
+    "NUM_WORKERS": 100,
+    "WRITES_PER_WORKER": 50,
+    "BASE_DELAY_MS": 10,
+    "MAX_RETRIES": 5,
+    "JITTER_FACTOR": 0.5,
+    "BUSY_TIMEOUT_MS": 15000
+  },
+  "totalTimeMs": 17492.163728,
+  "totalWrites": 5000,
+  "successfulWrites": 5000,
+  "failedWrites": 0,
+  "successRate": 100,
+  "throughput": 285.8422821641222,
+  "latency": {
+    "min": 0.9112700000005134,
+    "avg": 227.61735817220006,
+    "p50": 3.0454030000000785,
+    "p90": 436.7111299999997,
+    "p95": 1138.614614,
+    "p99": 5239.708734,
+    "max": 13447.566928999999
+  },
+  "retryDistribution": {
+    "0": 5000
+  },
+  "passed": false
+}
