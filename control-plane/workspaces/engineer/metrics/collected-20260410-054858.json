@@ -1,0 +1,12 @@
+{
+  "collection_id": "col_1775800138",
+  "timestamp": "2026-04-10T05:48:58Z",
+  "collector_version": "1.0.0",
+  "lanes": {},
+  "summary": {
+    "total_metrics_files": 0,
+    "total_indexed_artifacts": 0,
+    "active_lanes": 0,
+    "lanes_scanned": 0
+  }
+}

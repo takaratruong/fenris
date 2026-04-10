@@ -1,0 +1,48 @@
+{
+  "collection_id": "col_1775800147",
+  "timestamp": "2026-04-10T05:49:07Z",
+  "collector_version": "1.0.0",
+  "lanes": {
+    "bench": {
+      "metrics_files": 1,
+      "indexed_artifacts": 0,
+      "latest_metric": "/home/ubuntu/.openclaw/workspace/control-plane/workspaces/bench/fenris-stress-test-3/artifacts/metrics.json"
+    },
+    "research": {
+      "metrics_files": 0,
+      "indexed_artifacts": 1,
+      "latest_metric": null
+    },
+    "engineer": {
+      "metrics_files": 0,
+      "indexed_artifacts": 0,
+      "latest_metric": null
+    },
+    "ops": {
+      "metrics_files": 0,
+      "indexed_artifacts": 0,
+      "latest_metric": null
+    },
+    "lab": {
+      "metrics_files": 0,
+      "indexed_artifacts": 0,
+      "latest_metric": null
+    },
+    "chief_of_staff": {
+      "metrics_files": 0,
+      "indexed_artifacts": 0,
+      "latest_metric": null
+    },
+    "orchestrator": {
+      "metrics_files": 0,
+      "indexed_artifacts": 0,
+      "latest_metric": null
+    }
+  },
+  "summary": {
+    "total_metrics_files": 1,
+    "total_indexed_artifacts": 1,
+    "active_lanes": 2,
+    "lanes_scanned": 7
+  }
+}
