@@ -1,0 +1,35 @@
+{
+  "baseline_id": "baseline_c",
+  "thread_id": "thr_1ed8fab902ab",
+  "created_at": "2026-04-10T06:44:00Z",
+  "methods": {
+    "method_1": {
+      "status": "completed",
+      "task_id": "tsk_623c9c8884a6",
+      "ended_at": "2026-04-10T09:38:30+00:00",
+      "error": null,
+      "pattern": "write_queue",
+      "results": {
+        "success_rate": 1.0,
+        "throughput_writes_per_sec": 6691.15,
+        "p99_latency_ms": 22.32,
+        "sqlite_busy_count": 0,
+        "total_writes": 401788,
+        "verdict": "PASS"
+      }
+    },
+    "method_2": {
+      "status": "pending",
+      "task_id": "tsk_33bc688abbc8"
+    },
+    "method_3": {
+      "status": "pending",
+      "task_id": "tsk_ed68c71fd626"
+    }
+  },
+  "shared_parameters": {
+    "evaluation_rounds": 5,
+    "metric_aggregation": "mean",
+    "timeout_per_method_sec": 300
+  }
+}

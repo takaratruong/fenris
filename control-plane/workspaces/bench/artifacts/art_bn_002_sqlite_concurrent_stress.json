@@ -1,0 +1,88 @@
+{
+  "artifact_id": "art_bn_002_sqlite_concurrent_stress",
+  "artifact_type": "benchmark_result",
+  "version": "1.0.0",
+  "created_at": "2026-04-10T07:47:09+00:00",
+  "created_by": {
+    "agent": "bench",
+    "task_id": "tsk_0eae63f632c3",
+    "thread_id": "thr_377e85d855d8"
+  },
+  "tags": [
+    "sqlite",
+    "concurrency",
+    "stress-test",
+    "wal-mode",
+    "database"
+  ],
+  "visibility": "cross-lane",
+  "schema_version": "artifact-v1",
+  "title": "SQLite Concurrent Write Stress Test (100 Writers, 60s)",
+  "source": {
+    "test_id": "sqlite_stress_20260410_074608",
+    "harness": "sqlite_stress_test/stress_test.py",
+    "raw_results": "sqlite_stress_test/results.json"
+  },
+  "content": {
+    "summary": {
+      "outcome": "PASS",
+      "integrity_check": "ok",
+      "total_writes": 53863,
+      "throughput_wps": 888.9,
+      "error_rate_percent": 0.5686
+    },
+    "configuration": {
+      "num_writers": 100,
+      "duration_sec": 60,
+      "db_settings": {
+        "journal_mode": "WAL",
+        "synchronous": "NORMAL",
+        "busy_timeout": 5000,
+        "wal_autocheckpoint": 1000,
+        "cache_size": -64000
+      }
+    },
+    "metrics": {
+      "writes": {
+        "total": 53863,
+        "inserts": 17991,
+        "updates": 35872
+      },
+      "latency_ms": {
+        "p50": 1.042,
+        "p99": 2833.102,
+        "mean": 83.021,
+        "max": 5009.362
+      },
+      "errors": {
+        "sqlite_busy": 0,
+        "lock_errors": 308,
+        "other": 0,
+        "total": 308
+      },
+      "throughput": {
+        "writes_per_second": 888.9,
+        "duration_actual_sec": 60.59
+      }
+    },
+    "analysis": {
+      "observations": [
+        "WAL mode enabled with NORMAL synchronous - good balance of safety/performance",
+        "No SQLITE_BUSY errors - busy_timeout of 5000ms was sufficient",
+        "308 lock errors (0.57% error rate) - acceptable under extreme contention",
+        "p50 latency 1ms is excellent; p99 at 2.8s indicates tail latency from lock contention",
+        "Integrity check passed - no data corruption under stress"
+      ],
+      "recommendations": [
+        "For lower p99 latency, consider reducing writer count or using connection pooling",
+        "Current settings appropriate for moderate-to-high concurrent write workloads",
+        "Lock errors are transient and handled by retry - not a concern at 0.57% rate"
+      ]
+    }
+  },
+  "cross_lane_hooks": {
+    "research": "Validates concurrent DB access patterns for production workloads",
+    "ops": "Baseline performance data for capacity planning",
+    "engineer": "WAL configuration verified under 100-writer stress"
+  }
+}

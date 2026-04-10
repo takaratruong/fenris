@@ -1,0 +1,61 @@
+{
+  "run_id": "run_bcfae07fb8a7",
+  "experiment_id": "harness_selftest",
+  "name": "baseline-harness-validation",
+  "lane": "engineer",
+  "status": "completed",
+  "start_time": "2026-04-10T05:51:52.492634+00:00",
+  "end_time": "2026-04-10T05:51:53.994434+00:00",
+  "duration_sec": 1.5018,
+  "checkpoints": [
+    {
+      "name": "start",
+      "timestamp": "2026-04-10T05:51:52.493449+00:00"
+    },
+    {
+      "name": "iterations_complete",
+      "timestamp": "2026-04-10T05:51:53.993820+00:00",
+      "data": {
+        "total": 3
+      }
+    }
+  ],
+  "custom_metrics": [
+    {
+      "name": "iteration",
+      "value": 0,
+      "timestamp": "2026-04-10T05:51:52.993532+00:00"
+    },
+    {
+      "name": "score",
+      "value": 0.9,
+      "timestamp": "2026-04-10T05:51:52.993545+00:00"
+    },
+    {
+      "name": "iteration",
+      "value": 1,
+      "timestamp": "2026-04-10T05:51:53.493657+00:00"
+    },
+    {
+      "name": "score",
+      "value": 0.93,
+      "timestamp": "2026-04-10T05:51:53.493679+00:00"
+    },
+    {
+      "name": "iteration",
+      "value": 2,
+      "timestamp": "2026-04-10T05:51:53.993791+00:00"
+    },
+    {
+      "name": "score",
+      "value": 0.96,
+      "timestamp": "2026-04-10T05:51:53.993813+00:00"
+    }
+  ],
+  "system_metrics_count": 1,
+  "errors": [],
+  "tags": [
+    "selftest",
+    "validation"
+  ]
+}

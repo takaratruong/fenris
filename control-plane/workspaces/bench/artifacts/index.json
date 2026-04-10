@@ -1,0 +1,47 @@
+{
+  "index_version": "1.0.0",
+  "last_updated": "2026-04-10T07:47:15+00:00",
+  "lane": "bench",
+  "artifacts": [
+    {
+      "artifact_id": "art_bn_001_fenris_stress_test_3",
+      "type": "benchmark_result",
+      "title": "Fenris AWS Infrastructure Stress Test #3",
+      "tags": [
+        "fenris",
+        "stress-test",
+        "aws",
+        "infrastructure"
+      ],
+      "visibility": "cross-lane",
+      "path": "artifacts/art_bn_001_fenris_stress_test_3.json",
+      "created_at": "2026-04-10T05:52:00.289762+00:00",
+      "task_id": null,
+      "thread_id": null
+    },
+    {
+      "artifact_id": "art_bn_002_sqlite_concurrent_stress",
+      "type": "benchmark_result",
+      "title": "SQLite Concurrent Write Stress Test (100 Writers, 60s)",
+      "tags": [
+        "sqlite",
+        "concurrency",
+        "stress-test",
+        "wal-mode",
+        "database"
+      ],
+      "visibility": "cross-lane",
+      "path": "artifacts/art_bn_002_sqlite_concurrent_stress.json",
+      "created_at": "2026-04-10T07:47:09+00:00",
+      "task_id": "tsk_0eae63f632c3",
+      "thread_id": "thr_377e85d855d8"
+    }
+  ],
+  "schema": {
+    "artifact_id": "string (unique, format: art_{lane}_{seq}_{slug})",
+    "artifact_type": "enum: benchmark_result | research_summary | evidence_collection | claim_support | experiment_log | probe_report",
+    "visibility": "enum: lane-local | cross-lane | public",
+    "tags": "string[] (for discovery)",
+    "cross_lane_hooks": "object (lane -> relevance description)"
+  }
+}

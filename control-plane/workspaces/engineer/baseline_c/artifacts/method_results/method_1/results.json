@@ -1,0 +1,449 @@
+{
+  "run_id": "c_method_1_ed4468cb",
+  "method_id": "method_1",
+  "task_id": "tsk_d68dfd7388a7",
+  "baseline": "baseline_c",
+  "status": "completed",
+  "start_time": "2026-04-10T06:48:11.593192+00:00",
+  "end_time": "2026-04-10T06:48:11.616340+00:00",
+  "duration_sec": 0.023148,
+  "checkpoints": [
+    {
+      "name": "evaluation_start",
+      "timestamp": "2026-04-10T06:48:11.593571+00:00",
+      "method": "method_1"
+    },
+    {
+      "name": "workload_generation_start",
+      "timestamp": "2026-04-10T06:48:11.593577+00:00",
+      "method": "method_1"
+    },
+    {
+      "name": "workload_generation_complete",
+      "timestamp": "2026-04-10T06:48:11.593987+00:00",
+      "method": "method_1",
+      "data": {
+        "items": 1000
+      }
+    },
+    {
+      "name": "iteration_0_start",
+      "timestamp": "2026-04-10T06:48:11.593992+00:00",
+      "method": "method_1"
+    },
+    {
+      "name": "iteration_0_complete",
+      "timestamp": "2026-04-10T06:48:11.596745+00:00",
+      "method": "method_1"
+    },
+    {
+      "name": "iteration_1_start",
+      "timestamp": "2026-04-10T06:48:11.596748+00:00",
+      "method": "method_1"
+    },
+    {
+      "name": "iteration_1_complete",
+      "timestamp": "2026-04-10T06:48:11.598771+00:00",
+      "method": "method_1"
+    },
+    {
+      "name": "iteration_2_start",
+      "timestamp": "2026-04-10T06:48:11.598773+00:00",
+      "method": "method_1"
+    },
+    {
+      "name": "iteration_2_complete",
+      "timestamp": "2026-04-10T06:48:11.600766+00:00",
+      "method": "method_1"
+    },
+    {
+      "name": "iteration_3_start",
+      "timestamp": "2026-04-10T06:48:11.600768+00:00",
+      "method": "method_1"
+    },
+    {
+      "name": "iteration_3_complete",
+      "timestamp": "2026-04-10T06:48:11.602734+00:00",
+      "method": "method_1"
+    },
+    {
+      "name": "iteration_4_start",
+      "timestamp": "2026-04-10T06:48:11.602736+00:00",
+      "method": "method_1"
+    },
+    {
+      "name": "iteration_4_complete",
+      "timestamp": "2026-04-10T06:48:11.604684+00:00",
+      "method": "method_1"
+    },
+    {
+      "name": "iteration_5_start",
+      "timestamp": "2026-04-10T06:48:11.604686+00:00",
+      "method": "method_1"
+    },
+    {
+      "name": "iteration_5_complete",
+      "timestamp": "2026-04-10T06:48:11.606653+00:00",
+      "method": "method_1"
+    },
+    {
+      "name": "iteration_6_start",
+      "timestamp": "2026-04-10T06:48:11.606655+00:00",
+      "method": "method_1"
+    },
+    {
+      "name": "iteration_6_complete",
+      "timestamp": "2026-04-10T06:48:11.608654+00:00",
+      "method": "method_1"
+    },
+    {
+      "name": "iteration_7_start",
+      "timestamp": "2026-04-10T06:48:11.608656+00:00",
+      "method": "method_1"
+    },
+    {
+      "name": "iteration_7_complete",
+      "timestamp": "2026-04-10T06:48:11.610665+00:00",
+      "method": "method_1"
+    },
+    {
+      "name": "iteration_8_start",
+      "timestamp": "2026-04-10T06:48:11.610667+00:00",
+      "method": "method_1"
+    },
+    {
+      "name": "iteration_8_complete",
+      "timestamp": "2026-04-10T06:48:11.612619+00:00",
+      "method": "method_1"
+    },
+    {
+      "name": "iteration_9_start",
+      "timestamp": "2026-04-10T06:48:11.612621+00:00",
+      "method": "method_1"
+    },
+    {
+      "name": "iteration_9_complete",
+      "timestamp": "2026-04-10T06:48:11.614581+00:00",
+      "method": "method_1"
+    },
+    {
+      "name": "evaluation_complete",
+      "timestamp": "2026-04-10T06:48:11.614638+00:00",
+      "method": "method_1"
+    }
+  ],
+  "metrics": [
+    {
+      "name": "iteration_duration_sec",
+      "value": 0.0027396678924560547,
+      "timestamp": "2026-04-10T06:48:11.596733+00:00",
+      "method": "method_1",
+      "tags": {
+        "iteration": "0"
+      }
+    },
+    {
+      "name": "pass_rate",
+      "value": 0.506,
+      "timestamp": "2026-04-10T06:48:11.596740+00:00",
+      "method": "method_1",
+      "tags": {
+        "iteration": "0"
+      }
+    },
+    {
+      "name": "validation_sum",
+      "value": 60854,
+      "timestamp": "2026-04-10T06:48:11.596743+00:00",
+      "method": "method_1",
+      "tags": {
+        "iteration": "0"
+      }
+    },
+    {
+      "name": "iteration_duration_sec",
+      "value": 0.002012014389038086,
+      "timestamp": "2026-04-10T06:48:11.598762+00:00",
+      "method": "method_1",
+      "tags": {
+        "iteration": "1"
+      }
+    },
+    {
+      "name": "pass_rate",
+      "value": 0.506,
+      "timestamp": "2026-04-10T06:48:11.598766+00:00",
+      "method": "method_1",
+      "tags": {
+        "iteration": "1"
+      }
+    },
+    {
+      "name": "validation_sum",
+      "value": 60854,
+      "timestamp": "2026-04-10T06:48:11.598768+00:00",
+      "method": "method_1",
+      "tags": {
+        "iteration": "1"
+      }
+    },
+    {
+      "name": "iteration_duration_sec",
+      "value": 0.0019855499267578125,
+      "timestamp": "2026-04-10T06:48:11.600758+00:00",
+      "method": "method_1",
+      "tags": {
+        "iteration": "2"
+      }
+    },
+    {
+      "name": "pass_rate",
+      "value": 0.506,
+      "timestamp": "2026-04-10T06:48:11.600762+00:00",
+      "method": "method_1",
+      "tags": {
+        "iteration": "2"
+      }
+    },
+    {
+      "name": "validation_sum",
+      "value": 60854,
+      "timestamp": "2026-04-10T06:48:11.600764+00:00",
+      "method": "method_1",
+      "tags": {
+        "iteration": "2"
+      }
+    },
+    {
+      "name": "iteration_duration_sec",
+      "value": 0.0019578933715820312,
+      "timestamp": "2026-04-10T06:48:11.602726+00:00",
+      "method": "method_1",
+      "tags": {
+        "iteration": "3"
+      }
+    },
+    {
+      "name": "pass_rate",
+      "value": 0.506,
+      "timestamp": "2026-04-10T06:48:11.602730+00:00",
+      "method": "method_1",
+      "tags": {
+        "iteration": "3"
+      }
+    },
+    {
+      "name": "validation_sum",
+      "value": 60854,
+      "timestamp": "2026-04-10T06:48:11.602732+00:00",
+      "method": "method_1",
+      "tags": {
+        "iteration": "3"
+      }
+    },
+    {
+      "name": "iteration_duration_sec",
+      "value": 0.0019409656524658203,
+      "timestamp": "2026-04-10T06:48:11.604677+00:00",
+      "method": "method_1",
+      "tags": {
+        "iteration": "4"
+      }
+    },
+    {
+      "name": "pass_rate",
+      "value": 0.506,
+      "timestamp": "2026-04-10T06:48:11.604680+00:00",
+      "method": "method_1",
+      "tags": {
+        "iteration": "4"
+      }
+    },
+    {
+      "name": "validation_sum",
+      "value": 60854,
+      "timestamp": "2026-04-10T06:48:11.604681+00:00",
+      "method": "method_1",
+      "tags": {
+        "iteration": "4"
+      }
+    },
+    {
+      "name": "iteration_duration_sec",
+      "value": 0.001955270767211914,
+      "timestamp": "2026-04-10T06:48:11.606642+00:00",
+      "method": "method_1",
+      "tags": {
+        "iteration": "5"
+      }
+    },
+    {
+      "name": "pass_rate",
+      "value": 0.506,
+      "timestamp": "2026-04-10T06:48:11.606645+00:00",
+      "method": "method_1",
+      "tags": {
+        "iteration": "5"
+      }
+    },
+    {
+      "name": "validation_sum",
+      "value": 60854,
+      "timestamp": "2026-04-10T06:48:11.606647+00:00",
+      "method": "method_1",
+      "tags": {
+        "iteration": "5"
+      }
+    },
+    {
+      "name": "iteration_duration_sec",
+      "value": 0.00199127197265625,
+      "timestamp": "2026-04-10T06:48:11.608646+00:00",
+      "method": "method_1",
+      "tags": {
+        "iteration": "6"
+      }
+    },
+    {
+      "name": "pass_rate",
+      "value": 0.506,
+      "timestamp": "2026-04-10T06:48:11.608650+00:00",
+      "method": "method_1",
+      "tags": {
+        "iteration": "6"
+      }
+    },
+    {
+      "name": "validation_sum",
+      "value": 60854,
+      "timestamp": "2026-04-10T06:48:11.608652+00:00",
+      "method": "method_1",
+      "tags": {
+        "iteration": "6"
+      }
+    },
+    {
+      "name": "iteration_duration_sec",
+      "value": 0.001996278762817383,
+      "timestamp": "2026-04-10T06:48:11.610652+00:00",
+      "method": "method_1",
+      "tags": {
+        "iteration": "7"
+      }
+    },
+    {
+      "name": "pass_rate",
+      "value": 0.506,
+      "timestamp": "2026-04-10T06:48:11.610657+00:00",
+      "method": "method_1",
+      "tags": {
+        "iteration": "7"
+      }
+    },
+    {
+      "name": "validation_sum",
+      "value": 60854,
+      "timestamp": "2026-04-10T06:48:11.610663+00:00",
+      "method": "method_1",
+      "tags": {
+        "iteration": "7"
+      }
+    },
+    {
+      "name": "iteration_duration_sec",
+      "value": 0.0019440650939941406,
+      "timestamp": "2026-04-10T06:48:11.612612+00:00",
+      "method": "method_1",
+      "tags": {
+        "iteration": "8"
+      }
+    },
+    {
+      "name": "pass_rate",
+      "value": 0.506,
+      "timestamp": "2026-04-10T06:48:11.612615+00:00",
+      "method": "method_1",
+      "tags": {
+        "iteration": "8"
+      }
+    },
+    {
+      "name": "validation_sum",
+      "value": 60854,
+      "timestamp": "2026-04-10T06:48:11.612617+00:00",
+      "method": "method_1",
+      "tags": {
+        "iteration": "8"
+      }
+    },
+    {
+      "name": "iteration_duration_sec",
+      "value": 0.001951456069946289,
+      "timestamp": "2026-04-10T06:48:11.614573+00:00",
+      "method": "method_1",
+      "tags": {
+        "iteration": "9"
+      }
+    },
+    {
+      "name": "pass_rate",
+      "value": 0.506,
+      "timestamp": "2026-04-10T06:48:11.614577+00:00",
+      "method": "method_1",
+      "tags": {
+        "iteration": "9"
+      }
+    },
+    {
+      "name": "validation_sum",
+      "value": 60854,
+      "timestamp": "2026-04-10T06:48:11.614579+00:00",
+      "method": "method_1",
+      "tags": {
+        "iteration": "9"
+      }
+    },
+    {
+      "name": "avg_iteration_duration_sec",
+      "value": 0.002047443389892578,
+      "timestamp": "2026-04-10T06:48:11.614587+00:00",
+      "method": "method_1"
+    },
+    {
+      "name": "min_iteration_duration_sec",
+      "value": 0.0019409656524658203,
+      "timestamp": "2026-04-10T06:48:11.614589+00:00",
+      "method": "method_1"
+    },
+    {
+      "name": "max_iteration_duration_sec",
+      "value": 0.0027396678924560547,
+      "timestamp": "2026-04-10T06:48:11.614590+00:00",
+      "method": "method_1"
+    },
+    {
+      "name": "overall_pass_rate",
+      "value": 0.506,
+      "timestamp": "2026-04-10T06:48:11.614591+00:00",
+      "method": "method_1"
+    },
+    {
+      "name": "total_items_processed",
+      "value": 10000,
+      "timestamp": "2026-04-10T06:48:11.614593+00:00",
+      "method": "method_1"
+    },
+    {
+      "name": "throughput_items_per_sec",
+      "value": 488413.99226792116,
+      "timestamp": "2026-04-10T06:48:11.614595+00:00",
+      "method": "method_1"
+    }
+  ],
+  "system_metrics": {
+    "load_1m": 13.32,
+    "load_5m": 14.24,
+    "load_15m": 13.87,
+    "mem_used_percent": 9.329806645131356
+  }
+}

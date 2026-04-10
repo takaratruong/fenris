@@ -1,0 +1,90 @@
+{
+  "method": "method_1",
+  "approach": "sequential_processing",
+  "characteristics": {
+    "parallelism": "none",
+    "memory_model": "constant",
+    "ordering_guarantee": "in_order"
+  },
+  "iterations": [
+    {
+      "iteration": 0,
+      "pass_count": 506,
+      "pass_rate": 0.506,
+      "validation_sum": 60854,
+      "duration_sec": 0.0027396678924560547
+    },
+    {
+      "iteration": 1,
+      "pass_count": 506,
+      "pass_rate": 0.506,
+      "validation_sum": 60854,
+      "duration_sec": 0.002012014389038086
+    },
+    {
+      "iteration": 2,
+      "pass_count": 506,
+      "pass_rate": 0.506,
+      "validation_sum": 60854,
+      "duration_sec": 0.0019855499267578125
+    },
+    {
+      "iteration": 3,
+      "pass_count": 506,
+      "pass_rate": 0.506,
+      "validation_sum": 60854,
+      "duration_sec": 0.0019578933715820312
+    },
+    {
+      "iteration": 4,
+      "pass_count": 506,
+      "pass_rate": 0.506,
+      "validation_sum": 60854,
+      "duration_sec": 0.0019409656524658203
+    },
+    {
+      "iteration": 5,
+      "pass_count": 506,
+      "pass_rate": 0.506,
+      "validation_sum": 60854,
+      "duration_sec": 0.001955270767211914
+    },
+    {
+      "iteration": 6,
+      "pass_count": 506,
+      "pass_rate": 0.506,
+      "validation_sum": 60854,
+      "duration_sec": 0.00199127197265625
+    },
+    {
+      "iteration": 7,
+      "pass_count": 506,
+      "pass_rate": 0.506,
+      "validation_sum": 60854,
+      "duration_sec": 0.001996278762817383
+    },
+    {
+      "iteration": 8,
+      "pass_count": 506,
+      "pass_rate": 0.506,
+      "validation_sum": 60854,
+      "duration_sec": 0.0019440650939941406
+    },
+    {
+      "iteration": 9,
+      "pass_count": 506,
+      "pass_rate": 0.506,
+      "validation_sum": 60854,
+      "duration_sec": 0.001951456069946289
+    }
+  ],
+  "aggregate_metrics": {
+    "avg_duration_sec": 0.002047443389892578,
+    "min_duration_sec": 0.0019409656524658203,
+    "max_duration_sec": 0.0027396678924560547,
+    "std_dev_duration": 0.0002319023433214519,
+    "overall_pass_rate": 0.506,
+    "total_items": 10000,
+    "throughput_items_per_sec": 488413.99226792116
+  }
+}

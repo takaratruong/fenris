@@ -1,0 +1,19 @@
+{
+  "artifacts": [
+    {
+      "run_id": "b_run_15e2acd24540",
+      "experiment_id": "baseline_b_20260410_065010_818b6a",
+      "name": "self_test",
+      "status": "completed",
+      "timestamp": "2026-04-10T06:50:11.357548+00:00",
+      "artifacts_path": "/home/ubuntu/.openclaw/workspace/control-plane/workspaces/engineer/baseline_b/artifacts/baseline_b_20260410_065010_818b6a",
+      "tags": [
+        "baseline_b",
+        "isolated",
+        "selftest"
+      ]
+    }
+  ],
+  "last_updated": "2026-04-10T06:50:11.357948+00:00",
+  "branch": "baseline_b"
+}

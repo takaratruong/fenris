@@ -1,6 +1,6 @@
 {
   "index_version": "1.0.0",
-  "last_updated": "2026-04-10T05:20:00Z",
+  "last_updated": "2026-04-10T09:33:00Z",
   "lane": "research",
   "artifacts": [
     {
@@ -13,6 +13,17 @@
       "created_at": "2026-04-10T05:20:00Z",
       "task_id": "tsk_df3c37471a7b",
       "thread_id": "thr_273344f47eeb"
+    },
+    {
+      "artifact_id": "art_rs_002_parallel_orchestration_patterns",
+      "type": "research_summary",
+      "title": "Parallel Orchestration Patterns for Shadow-Clone Lanes",
+      "tags": ["parallel-execution", "orchestration", "shadow-clone", "distributed-systems"],
+      "visibility": "cross-lane",
+      "path": "artifacts/art_rs_002_parallel_orchestration_patterns.json",
+      "created_at": "2026-04-10T09:33:00Z",
+      "task_id": "tsk_cc320792c32e",
+      "thread_id": "thr_84edcaebb0e1"
     }
   ],
   "schema": {

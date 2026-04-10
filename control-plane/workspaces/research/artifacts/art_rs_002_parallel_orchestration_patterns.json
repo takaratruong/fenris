@@ -1,0 +1,82 @@
+{
+  "artifact_id": "art_rs_002_parallel_orchestration_patterns",
+  "type": "research_summary",
+  "title": "Parallel Orchestration Patterns for Shadow-Clone Lanes",
+  "created_at": "2026-04-10T09:33:00Z",
+  "task_id": "tsk_cc320792c32e",
+  "thread_id": "thr_84edcaebb0e1",
+  "visibility": "cross-lane",
+  "tags": ["parallel-execution", "orchestration", "shadow-clone", "distributed-systems"],
+  "summary": "Survey of 5 parallel execution patterns evaluated for shadow-clone lanes with max 3 specialists per lane.",
+  "constraint": "Max 3 specialists per lane",
+  "patterns": [
+    {
+      "name": "Scatter-Gather",
+      "description": "Coordinator scatters work to multiple workers in parallel, waits for all responses, then aggregates results into consolidated output.",
+      "structure": "1 coordinator → N workers → 1 aggregator",
+      "fit_for_shadow_clones": "EXCELLENT",
+      "fit_rationale": "Perfect match for 3-specialist lanes. Coordinator assigns independent sub-tasks to each specialist, waits for completion, merges results. Natural barrier synchronization.",
+      "use_when": "Task is decomposable into independent chunks that can be processed simultaneously and combined.",
+      "example": "Research task split into 3 source domains; each specialist investigates one domain; results merged into unified finding.",
+      "coordination_overhead": "Low - single scatter, single gather",
+      "failure_handling": "Can proceed with partial results or retry individual workers"
+    },
+    {
+      "name": "Pipeline (Stages)",
+      "description": "Work flows through sequential stages; each stage can have parallel workers. Output of stage N feeds stage N+1.",
+      "structure": "Stage1 → Stage2 → Stage3 (each stage may have parallel workers)",
+      "fit_for_shadow_clones": "GOOD",
+      "fit_rationale": "Works well when task has natural phases (e.g., gather → analyze → synthesize). Each specialist can own a stage, or 3 specialists can parallelize within a stage.",
+      "use_when": "Work has sequential dependencies but throughput matters; or different specialists have different capabilities suited to different stages.",
+      "example": "Specialist 1 collects raw data, Specialist 2 validates/cleans, Specialist 3 produces final output.",
+      "coordination_overhead": "Medium - requires stage handoffs and buffering",
+      "failure_handling": "Stage failure blocks downstream; need retry or bypass logic"
+    },
+    {
+      "name": "Map-Reduce",
+      "description": "Map phase: split input and apply transformation in parallel. Reduce phase: aggregate mapped outputs into final result.",
+      "structure": "Split → Map(parallel) → Shuffle → Reduce(parallel or serial)",
+      "fit_for_shadow_clones": "GOOD",
+      "fit_rationale": "With 3 specialists, can assign 3 mappers then converge to 1 reducer, or have 2 mappers + 1 reducer. Best for homogeneous tasks.",
+      "use_when": "Large input can be partitioned; same operation applies to each partition; results can be combined associatively.",
+      "example": "Analyze 3 codebases independently (map), then synthesize common patterns (reduce).",
+      "coordination_overhead": "Medium - requires shuffle/sort step between phases",
+      "failure_handling": "Failed mappers can be retried independently; reducer failure requires re-reduce"
+    },
+    {
+      "name": "Competing Consumers",
+      "description": "Multiple workers pull from a shared work queue; each task processed by exactly one worker. Load-balances automatically.",
+      "structure": "Queue → Worker1 | Worker2 | Worker3 (competing)",
+      "fit_for_shadow_clones": "MODERATE",
+      "fit_rationale": "Good for variable-length tasks where you want automatic load balancing. Less control over which specialist gets which work. Works if specialists are interchangeable.",
+      "use_when": "Tasks are independent and homogeneous; want automatic load distribution; don't need to control assignment.",
+      "example": "Process queue of code review items; any available specialist picks next item.",
+      "coordination_overhead": "Low - queue handles distribution",
+      "failure_handling": "Failed task returns to queue for another consumer; need idempotency or dedup"
+    },
+    {
+      "name": "Fork-Join (Recursive Decomposition)",
+      "description": "Recursively split task into sub-tasks, fork parallel execution, join results. Can nest arbitrarily deep.",
+      "structure": "Fork(task) → [subtask1, subtask2, ...] → Join(results)",
+      "fit_for_shadow_clones": "MODERATE",
+      "fit_rationale": "With only 3 specialists, deep recursion wastes the pattern's power. Best for 1-2 levels of forking. May over-complicate simple parallel work.",
+      "use_when": "Task has natural recursive structure; sub-problems are independent; depth is bounded.",
+      "example": "Break complex analysis into sub-analyses, each potentially splitting further, then join up the tree.",
+      "coordination_overhead": "High - requires tracking fork/join tree and synchronization at each level",
+      "failure_handling": "Complex - must propagate failures up the tree and decide on partial results vs full retry"
+    }
+  ],
+  "recommendation": {
+    "primary_pattern": "Scatter-Gather",
+    "rationale": "For shadow-clone lanes with max 3 specialists, Scatter-Gather offers the best balance of simplicity, control, and parallelism. The coordinator naturally maps to the lane orchestrator, and 3 workers fits the specialist cap exactly. Barrier sync at gather point ensures coherent results.",
+    "secondary_pattern": "Pipeline",
+    "secondary_rationale": "Use Pipeline when specialists have differentiated capabilities or when work has natural sequential phases. Can combine: scatter-gather within a pipeline stage.",
+    "avoid": "Fork-Join is over-engineered for 3 specialists; Competing Consumers loses assignment control which may matter for specialist differentiation."
+  },
+  "sources": [
+    "AWS Prescriptive Guidance: Parallelization and Scatter-Gather Patterns for Agentic AI",
+    "Enterprise Integration Patterns (Hohpe & Woolf)",
+    "Distributed Application Architecture Patterns - Scalability Patterns",
+    "Apache Hadoop MapReduce documentation"
+  ]
+}

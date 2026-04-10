@@ -1,0 +1,20 @@
+{
+  "branch_id": "baseline_c",
+  "created": "2026-04-10T06:44:00Z",
+  "task_id": "tsk_33bc688abbc8",
+  "thread_id": "thr_1ed8fab902ab",
+  "isolation_level": "shared",
+  "shared_with": ["method_1", "method_2", "method_3"],
+  "shared_context": {
+    "baseline_type": "shared_branch",
+    "purpose": "Method comparison evaluation",
+    "methods_registered": ["method_2"],
+    "common_parameters": {
+      "input_size": 1000,
+      "iterations": 10,
+      "seed": 42
+    }
+  },
+  "runs": [],
+  "last_updated": "2026-04-10T06:44:00Z"
+}

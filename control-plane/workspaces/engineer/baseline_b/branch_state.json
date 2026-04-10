@@ -1,0 +1,23 @@
+{
+  "branch_id": "baseline_b",
+  "created": "2026-04-10T06:44:00Z",
+  "task_id": "tsk_e5bcd016cfac",
+  "thread_id": "thr_982538c0d49b",
+  "isolation_level": "strict",
+  "shared_with": [],
+  "runs": [
+    {
+      "run_id": "b_run_15e2acd24540",
+      "experiment_id": "baseline_b_20260410_065010_818b6a",
+      "status": "started",
+      "timestamp": "2026-04-10T06:50:10.456082+00:00"
+    },
+    {
+      "run_id": "b_run_15e2acd24540",
+      "experiment_id": "baseline_b_20260410_065010_818b6a",
+      "status": "completed",
+      "timestamp": "2026-04-10T06:50:11.358096+00:00"
+    }
+  ],
+  "last_updated": "2026-04-10T06:50:11.358101+00:00"
+}

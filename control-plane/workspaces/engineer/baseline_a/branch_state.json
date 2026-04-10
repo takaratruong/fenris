@@ -1,0 +1,19 @@
+{
+  "branch": "baseline_a",
+  "isolation_level": "strict",
+  "created_at": "2026-04-10T06:44:00Z",
+  "created_by": {
+    "task_id": "tsk_f31aa1e4717f",
+    "thread_id": "thr_103342623ef7",
+    "agent": "engineer"
+  },
+  "shared_with": [],
+  "notes": "Baseline A operates in strict isolation. No state is shared with Baselines B or C. This is intentional to ensure clean experimental separation.",
+  "isolation_checks": {
+    "memory_path": "baseline_a/memory/",
+    "artifacts_path": "baseline_a/artifacts/",
+    "namespace_prefix": "baseline_a_",
+    "cross_contamination_prevention": true
+  },
+  "version": 1
+}

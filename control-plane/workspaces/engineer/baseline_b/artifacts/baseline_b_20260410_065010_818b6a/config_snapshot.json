@@ -1,0 +1,37 @@
+{
+  "run_id": "b_run_15e2acd24540",
+  "config": {
+    "experiment_id": "baseline_b_20260410_065010_818b6a",
+    "name": "self_test",
+    "lane": "engineer",
+    "metrics_interval_sec": 1.0,
+    "timeout_sec": null,
+    "tags": [
+      "baseline_b",
+      "isolated",
+      "selftest"
+    ],
+    "parameters": {},
+    "collect_system_metrics": true,
+    "artifact_retention_days": 30
+  },
+  "system_info": {
+    "hostname": "ip-10-0-96-54",
+    "platform": "Linux-6.17.0-1007-aws-x86_64-with-glibc2.39",
+    "python_version": "3.12.3 (main, Mar  3 2026, 12:15:18) [GCC 13.3.0]",
+    "cpu_count": 192,
+    "timestamp": "2026-04-10T06:50:10.385290+00:00",
+    "mem_total_kb": 1564481940,
+    "gpus": [
+      "NVIDIA L40S, 46068 MiB",
+      "NVIDIA L40S, 46068 MiB",
+      "NVIDIA L40S, 46068 MiB",
+      "NVIDIA L40S, 46068 MiB",
+      "NVIDIA L40S, 46068 MiB",
+      "NVIDIA L40S, 46068 MiB",
+      "NVIDIA L40S, 46068 MiB",
+      "NVIDIA L40S, 46068 MiB"
+    ]
+  },
+  "env_snapshot": {}
+}

@@ -1,0 +1,38 @@
+{
+  "test_config": {
+    "num_writers": 100,
+    "duration_sec": 60,
+    "db_path": "/tmp/writequeue_test_gr86elzp/stress_test.db"
+  },
+  "summary": {
+    "total_writes_attempted": 401788,
+    "total_writes_succeeded": 401788,
+    "total_writes_failed": 0,
+    "success_rate": 1.0,
+    "throughput_writes_per_sec": 6691.148859791551,
+    "elapsed_sec": 60.04768514633179,
+    "sqlite_busy_count": 0
+  },
+  "latency_ms": {
+    "min": 9.673357009887695,
+    "avg": 13.773078758691637,
+    "p50": 11.991024017333984,
+    "p95": 21.681547164916992,
+    "p99": 22.31574058532715,
+    "max": 28.304338455200195
+  },
+  "queue_metrics": {
+    "writes_completed": 401788,
+    "writes_failed": 0,
+    "busy_count": 0,
+    "avg_write_time_ms": 0.13449637163808925,
+    "queue_size": 0
+  },
+  "evaluation": {
+    "method": "write_queue_pattern",
+    "method_id": 1,
+    "verdict": "PASS",
+    "timestamp": "2026-04-10T09:38:00Z",
+    "notes": "Write queue successfully serializes all concurrent writes with zero SQLITE_BUSY errors and 100% success rate"
+  }
+}

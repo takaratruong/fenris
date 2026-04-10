@@ -1,0 +1,38 @@
+{
+  "run_id": "run_bcfae07fb8a7",
+  "config": {
+    "experiment_id": "harness_selftest",
+    "name": "baseline-harness-validation",
+    "lane": "engineer",
+    "metrics_interval_sec": 1.0,
+    "timeout_sec": null,
+    "tags": [
+      "selftest",
+      "validation"
+    ],
+    "parameters": {
+      "test_iterations": 3
+    },
+    "collect_system_metrics": true,
+    "artifact_retention_days": 30
+  },
+  "system_info": {
+    "hostname": "ip-10-0-96-54",
+    "platform": "Linux-6.17.0-1007-aws-x86_64-with-glibc2.39",
+    "python_version": "3.12.3 (main, Mar  3 2026, 12:15:18) [GCC 13.3.0]",
+    "cpu_count": 192,
+    "timestamp": "2026-04-10T05:51:52.426208+00:00",
+    "mem_total_kb": 1564481940,
+    "gpus": [
+      "NVIDIA L40S, 46068 MiB",
+      "NVIDIA L40S, 46068 MiB",
+      "NVIDIA L40S, 46068 MiB",
+      "NVIDIA L40S, 46068 MiB",
+      "NVIDIA L40S, 46068 MiB",
+      "NVIDIA L40S, 46068 MiB",
+      "NVIDIA L40S, 46068 MiB",
+      "NVIDIA L40S, 46068 MiB"
+    ]
+  },
+  "env_snapshot": {}
+}

@@ -1,0 +1,90 @@
+{
+  "run_id": "baseline_a_run_e21e8cd7",
+  "baseline": "A",
+  "isolation_mode": "strict",
+  "experiment_name": "baseline_a_demo",
+  "status": "completed",
+  "start_time": "2026-04-10T06:47:01.331065+00:00",
+  "end_time": "2026-04-10T06:47:01.332550+00:00",
+  "duration_sec": 0.001485,
+  "checkpoints": [
+    {
+      "name": "baseline_a_start",
+      "timestamp": "2026-04-10T06:47:01.331172+00:00",
+      "data": {
+        "isolation_mode": "strict",
+        "memory_keys": []
+      }
+    },
+    {
+      "name": "work_start",
+      "timestamp": "2026-04-10T06:47:01.331181+00:00"
+    },
+    {
+      "name": "work_complete",
+      "timestamp": "2026-04-10T06:47:01.332418+00:00",
+      "data": {
+        "final_score": 0.8800000000000001
+      }
+    }
+  ],
+  "custom_metrics": [
+    {
+      "name": "baseline_a.iteration_score",
+      "value": 0.8,
+      "timestamp": "2026-04-10T06:47:01.331186+00:00",
+      "tags": {
+        "iteration": "0"
+      }
+    },
+    {
+      "name": "baseline_a.iteration_score",
+      "value": 0.8400000000000001,
+      "timestamp": "2026-04-10T06:47:01.331189+00:00",
+      "tags": {
+        "iteration": "1"
+      }
+    },
+    {
+      "name": "baseline_a.iteration_score",
+      "value": 0.88,
+      "timestamp": "2026-04-10T06:47:01.331192+00:00",
+      "tags": {
+        "iteration": "2"
+      }
+    },
+    {
+      "name": "baseline_a.iteration_score",
+      "value": 0.92,
+      "timestamp": "2026-04-10T06:47:01.331194+00:00",
+      "tags": {
+        "iteration": "3"
+      }
+    },
+    {
+      "name": "baseline_a.iteration_score",
+      "value": 0.9600000000000001,
+      "timestamp": "2026-04-10T06:47:01.331196+00:00",
+      "tags": {
+        "iteration": "4"
+      }
+    },
+    {
+      "name": "baseline_a.final_score",
+      "value": 0.8800000000000001,
+      "timestamp": "2026-04-10T06:47:01.331199+00:00"
+    }
+  ],
+  "errors": [],
+  "tags": [
+    "baseline_a",
+    "isolated",
+    "demo",
+    "tsk_f31aa1e4717f"
+  ],
+  "memory_keys_at_end": [
+    "last_demo_score",
+    "demo_history"
+  ],
+  "isolation_verified": true
+}

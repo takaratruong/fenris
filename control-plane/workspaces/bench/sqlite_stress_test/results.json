@@ -1,0 +1,652 @@
+{
+  "test_id": "sqlite_stress_20260410_074608",
+  "start_time": "2026-04-10T07:46:08.515360+00:00",
+  "end_time": "2026-04-10T07:47:09.107294+00:00",
+  "duration_sec": 60.59193786419928,
+  "num_writers": 100,
+  "db_settings": {
+    "journal_mode": "WAL",
+    "synchronous": "NORMAL",
+    "busy_timeout": 5000,
+    "wal_autocheckpoint": 1000,
+    "cache_size": -64000
+  },
+  "total_writes": 53863,
+  "total_inserts": 17991,
+  "total_updates": 35872,
+  "total_busy_errors": 0,
+  "total_lock_errors": 308,
+  "total_other_errors": 0,
+  "latency_p50_ms": 1.0423213243484497,
+  "latency_p99_ms": 2833.102491684258,
+  "latency_mean_ms": 83.0207509147406,
+  "latency_max_ms": 5009.362314362079,
+  "writes_per_second": 888.9466470063986,
+  "error_rate_percent": 0.5685698990234628,
+  "integrity_check_passed": true,
+  "integrity_check_output": "ok",
+  "per_thread_stats": [
+    {
+      "thread_id": 0,
+      "writes": 521,
+      "busy_errors": 0,
+      "lock_errors": 3
+    },
+    {
+      "thread_id": 1,
+      "writes": 961,
+      "busy_errors": 0,
+      "lock_errors": 2
+    },
+    {
+      "thread_id": 2,
+      "writes": 546,
+      "busy_errors": 0,
+      "lock_errors": 1
+    },
+    {
+      "thread_id": 3,
+      "writes": 412,
+      "busy_errors": 0,
+      "lock_errors": 2
+    },
+    {
+      "thread_id": 4,
+      "writes": 782,
+      "busy_errors": 0,
+      "lock_errors": 5
+    },
+    {
+      "thread_id": 5,
+      "writes": 346,
+      "busy_errors": 0,
+      "lock_errors": 4
+    },
+    {
+      "thread_id": 6,
+      "writes": 858,
+      "busy_errors": 0,
+      "lock_errors": 3
+    },
+    {
+      "thread_id": 7,
+      "writes": 652,
+      "busy_errors": 0,
+      "lock_errors": 1
+    },
+    {
+      "thread_id": 8,
+      "writes": 295,
+      "busy_errors": 0,
+      "lock_errors": 4
+    },
+    {
+      "thread_id": 9,
+      "writes": 642,
+      "busy_errors": 0,
+      "lock_errors": 2
+    },
+    {
+      "thread_id": 10,
+      "writes": 479,
+      "busy_errors": 0,
+      "lock_errors": 1
+    },
+    {
+      "thread_id": 11,
+      "writes": 577,
+      "busy_errors": 0,
+      "lock_errors": 3
+    },
+    {
+      "thread_id": 12,
+      "writes": 461,
+      "busy_errors": 0,
+      "lock_errors": 2
+    },
+    {
+      "thread_id": 13,
+      "writes": 261,
+      "busy_errors": 0,
+      "lock_errors": 4
+    },
+    {
+      "thread_id": 14,
+      "writes": 312,
+      "busy_errors": 0,
+      "lock_errors": 2
+    },
+    {
+      "thread_id": 15,
+      "writes": 526,
+      "busy_errors": 0,
+      "lock_errors": 3
+    },
+    {
+      "thread_id": 16,
+      "writes": 738,
+      "busy_errors": 0,
+      "lock_errors": 3
+    },
+    {
+      "thread_id": 17,
+      "writes": 879,
+      "busy_errors": 0,
+      "lock_errors": 3
+    },
+    {
+      "thread_id": 18,
+      "writes": 346,
+      "busy_errors": 0,
+      "lock_errors": 6
+    },
+    {
+      "thread_id": 19,
+      "writes": 1003,
+      "busy_errors": 0,
+      "lock_errors": 2
+    },
+    {
+      "thread_id": 20,
+      "writes": 348,
+      "busy_errors": 0,
+      "lock_errors": 3
+    },
+    {
+      "thread_id": 21,
+      "writes": 187,
+      "busy_errors": 0,
+      "lock_errors": 6
+    },
+    {
+      "thread_id": 22,
+      "writes": 558,
+      "busy_errors": 0,
+      "lock_errors": 2
+    },
+    {
+      "thread_id": 23,
+      "writes": 377,
+      "busy_errors": 0,
+      "lock_errors": 3
+    },
+    {
+      "thread_id": 24,
+      "writes": 229,
+      "busy_errors": 0,
+      "lock_errors": 6
+    },
+    {
+      "thread_id": 25,
+      "writes": 655,
+      "busy_errors": 0,
+      "lock_errors": 1
+    },
+    {
+      "thread_id": 26,
+      "writes": 281,
+      "busy_errors": 0,
+      "lock_errors": 2
+    },
+    {
+      "thread_id": 27,
+      "writes": 808,
+      "busy_errors": 0,
+      "lock_errors": 5
+    },
+    {
+      "thread_id": 28,
+      "writes": 306,
+      "busy_errors": 0,
+      "lock_errors": 3
+    },
+    {
+      "thread_id": 29,
+      "writes": 474,
+      "busy_errors": 0,
+      "lock_errors": 3
+    },
+    {
+      "thread_id": 30,
+      "writes": 573,
+      "busy_errors": 0,
+      "lock_errors": 2
+    },
+    {
+      "thread_id": 31,
+      "writes": 350,
+      "busy_errors": 0,
+      "lock_errors": 4
+    },
+    {
+      "thread_id": 32,
+      "writes": 416,
+      "busy_errors": 0,
+      "lock_errors": 4
+    },
+    {
+      "thread_id": 33,
+      "writes": 579,
+      "busy_errors": 0,
+      "lock_errors": 1
+    },
+    {
+      "thread_id": 34,
+      "writes": 1043,
+      "busy_errors": 0,
+      "lock_errors": 3
+    },
+    {
+      "thread_id": 35,
+      "writes": 742,
+      "busy_errors": 0,
+      "lock_errors": 1
+    },
+    {
+      "thread_id": 36,
+      "writes": 614,
+      "busy_errors": 0,
+      "lock_errors": 3
+    },
+    {
+      "thread_id": 37,
+      "writes": 238,
+      "busy_errors": 0,
+      "lock_errors": 4
+    },
+    {
+      "thread_id": 38,
+      "writes": 219,
+      "busy_errors": 0,
+      "lock_errors": 5
+    },
+    {
+      "thread_id": 39,
+      "writes": 112,
+      "busy_errors": 0,
+      "lock_errors": 6
+    },
+    {
+      "thread_id": 40,
+      "writes": 251,
+      "busy_errors": 0,
+      "lock_errors": 5
+    },
+    {
+      "thread_id": 41,
+      "writes": 1115,
+      "busy_errors": 0,
+      "lock_errors": 1
+    },
+    {
+      "thread_id": 42,
+      "writes": 492,
+      "busy_errors": 0,
+      "lock_errors": 5
+    },
+    {
+      "thread_id": 43,
+      "writes": 633,
+      "busy_errors": 0,
+      "lock_errors": 5
+    },
+    {
+      "thread_id": 44,
+      "writes": 873,
+      "busy_errors": 0,
+      "lock_errors": 3
+    },
+    {
+      "thread_id": 45,
+      "writes": 1064,
+      "busy_errors": 0,
+      "lock_errors": 2
+    },
+    {
+      "thread_id": 46,
+      "writes": 364,
+      "busy_errors": 0,
+      "lock_errors": 3
+    },
+    {
+      "thread_id": 47,
+      "writes": 586,
+      "busy_errors": 0,
+      "lock_errors": 1
+    },
+    {
+      "thread_id": 48,
+      "writes": 559,
+      "busy_errors": 0,
+      "lock_errors": 3
+    },
+    {
+      "thread_id": 49,
+      "writes": 416,
+      "busy_errors": 0,
+      "lock_errors": 4
+    },
+    {
+      "thread_id": 50,
+      "writes": 992,
+      "busy_errors": 0,
+      "lock_errors": 2
+    },
+    {
+      "thread_id": 51,
+      "writes": 387,
+      "busy_errors": 0,
+      "lock_errors": 2
+    },
+    {
+      "thread_id": 52,
+      "writes": 552,
+      "busy_errors": 0,
+      "lock_errors": 3
+    },
+    {
+      "thread_id": 53,
+      "writes": 214,
+      "busy_errors": 0,
+      "lock_errors": 2
+    },
+    {
+      "thread_id": 54,
+      "writes": 270,
+      "busy_errors": 0,
+      "lock_errors": 2
+    },
+    {
+      "thread_id": 55,
+      "writes": 572,
+      "busy_errors": 0,
+      "lock_errors": 4
+    },
+    {
+      "thread_id": 56,
+      "writes": 299,
+      "busy_errors": 0,
+      "lock_errors": 4
+    },
+    {
+      "thread_id": 57,
+      "writes": 729,
+      "busy_errors": 0,
+      "lock_errors": 1
+    },
+    {
+      "thread_id": 58,
+      "writes": 586,
+      "busy_errors": 0,
+      "lock_errors": 3
+    },
+    {
+      "thread_id": 59,
+      "writes": 836,
+      "busy_errors": 0,
+      "lock_errors": 4
+    },
+    {
+      "thread_id": 60,
+      "writes": 467,
+      "busy_errors": 0,
+      "lock_errors": 0
+    },
+    {
+      "thread_id": 61,
+      "writes": 451,
+      "busy_errors": 0,
+      "lock_errors": 5
+    },
+    {
+      "thread_id": 62,
+      "writes": 725,
+      "busy_errors": 0,
+      "lock_errors": 3
+    },
+    {
+      "thread_id": 63,
+      "writes": 238,
+      "busy_errors": 0,
+      "lock_errors": 3
+    },
+    {
+      "thread_id": 64,
+      "writes": 589,
+      "busy_errors": 0,
+      "lock_errors": 5
+    },
+    {
+      "thread_id": 65,
+      "writes": 490,
+      "busy_errors": 0,
+      "lock_errors": 1
+    },
+    {
+      "thread_id": 66,
+      "writes": 424,
+      "busy_errors": 0,
+      "lock_errors": 2
+    },
+    {
+      "thread_id": 67,
+      "writes": 1348,
+      "busy_errors": 0,
+      "lock_errors": 4
+    },
+    {
+      "thread_id": 68,
+      "writes": 480,
+      "busy_errors": 0,
+      "lock_errors": 3
+    },
+    {
+      "thread_id": 69,
+      "writes": 752,
+      "busy_errors": 0,
+      "lock_errors": 4
+    },
+    {
+      "thread_id": 70,
+      "writes": 755,
+      "busy_errors": 0,
+      "lock_errors": 1
+    },
+    {
+      "thread_id": 71,
+      "writes": 192,
+      "busy_errors": 0,
+      "lock_errors": 1
+    },
+    {
+      "thread_id": 72,
+      "writes": 91,
+      "busy_errors": 0,
+      "lock_errors": 6
+    },
+    {
+      "thread_id": 73,
+      "writes": 575,
+      "busy_errors": 0,
+      "lock_errors": 4
+    },
+    {
+      "thread_id": 74,
+      "writes": 348,
+      "busy_errors": 0,
+      "lock_errors": 5
+    },
+    {
+      "thread_id": 75,
+      "writes": 559,
+      "busy_errors": 0,
+      "lock_errors": 1
+    },
+    {
+      "thread_id": 76,
+      "writes": 472,
+      "busy_errors": 0,
+      "lock_errors": 3
+    },
+    {
+      "thread_id": 77,
+      "writes": 748,
+      "busy_errors": 0,
+      "lock_errors": 3
+    },
+    {
+      "thread_id": 78,
+      "writes": 588,
+      "busy_errors": 0,
+      "lock_errors": 2
+    },
+    {
+      "thread_id": 79,
+      "writes": 1047,
+      "busy_errors": 0,
+      "lock_errors": 2
+    },
+    {
+      "thread_id": 80,
+      "writes": 1308,
+      "busy_errors": 0,
+      "lock_errors": 3
+    },
+    {
+      "thread_id": 81,
+      "writes": 241,
+      "busy_errors": 0,
+      "lock_errors": 5
+    },
+    {
+      "thread_id": 82,
+      "writes": 420,
+      "busy_errors": 0,
+      "lock_errors": 3
+    },
+    {
+      "thread_id": 83,
+      "writes": 453,
+      "busy_errors": 0,
+      "lock_errors": 6
+    },
+    {
+      "thread_id": 84,
+      "writes": 445,
+      "busy_errors": 0,
+      "lock_errors": 4
+    },
+    {
+      "thread_id": 85,
+      "writes": 259,
+      "busy_errors": 0,
+      "lock_errors": 3
+    },
+    {
+      "thread_id": 86,
+      "writes": 394,
+      "busy_errors": 0,
+      "lock_errors": 4
+    },
+    {
+      "thread_id": 87,
+      "writes": 246,
+      "busy_errors": 0,
+      "lock_errors": 3
+    },
+    {
+      "thread_id": 88,
+      "writes": 255,
+      "busy_errors": 0,
+      "lock_errors": 4
+    },
+    {
+      "thread_id": 89,
+      "writes": 1260,
+      "busy_errors": 0,
+      "lock_errors": 2
+    },
+    {
+      "thread_id": 90,
+      "writes": 571,
+      "busy_errors": 0,
+      "lock_errors": 2
+    },
+    {
+      "thread_id": 91,
+      "writes": 580,
+      "busy_errors": 0,
+      "lock_errors": 2
+    },
+    {
+      "thread_id": 92,
+      "writes": 760,
+      "busy_errors": 0,
+      "lock_errors": 6
+    },
+    {
+      "thread_id": 93,
+      "writes": 532,
+      "busy_errors": 0,
+      "lock_errors": 2
+    },
+    {
+      "thread_id": 94,
+      "writes": 203,
+      "busy_errors": 0,
+      "lock_errors": 3
+    },
+    {
+      "thread_id": 95,
+      "writes": 994,
+      "busy_errors": 0,
+      "lock_errors": 2
+    },
+    {
+      "thread_id": 96,
+      "writes": 167,
+      "busy_errors": 0,
+      "lock_errors": 4
+    },
+    {
+      "thread_id": 97,
+      "writes": 214,
+      "busy_errors": 0,
+      "lock_errors": 4
+    },
+    {
+      "thread_id": 98,
+      "writes": 176,
+      "busy_errors": 0,
+      "lock_errors": 2
+    },
+    {
+      "thread_id": 99,
+      "writes": 550,
+      "busy_errors": 0,
+      "lock_errors": 4
+    }
+  ],
+  "error_samples": [
+    "Thread 0: database is locked",
+    "Thread 0: database is locked",
+    "Thread 1: database is locked",
+    "Thread 1: database is locked",
+    "Thread 2: database is locked",
+    "Thread 3: database is locked",
+    "Thread 3: database is locked",
+    "Thread 4: database is locked",
+    "Thread 4: database is locked",
+    "Thread 5: database is locked",
+    "Thread 5: database is locked",
+    "Thread 6: database is locked",
+    "Thread 6: database is locked",
+    "Thread 7: database is locked",
+    "Thread 8: database is locked",
+    "Thread 8: database is locked",
+    "Thread 9: database is locked",
+    "Thread 9: database is locked",
+    "Thread 10: database is locked",
+    "Thread 11: database is locked"
+  ]
+}
