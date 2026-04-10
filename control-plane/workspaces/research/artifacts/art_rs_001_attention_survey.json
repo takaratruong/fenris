@@ -1,0 +1,105 @@
+{
+  "artifact_id": "art_rs_001_attention_survey",
+  "artifact_type": "research_summary",
+  "version": "1.0.0",
+  "created_at": "2026-04-10T05:20:00Z",
+  "created_by": {
+    "agent": "research",
+    "task_id": "tsk_df3c37471a7b",
+    "thread_id": "thr_273344f47eeb"
+  },
+  "tags": [
+    "attention-mechanisms",
+    "long-context",
+    "transformer",
+    "sparse-attention",
+    "linear-attention",
+    "llm-architecture",
+    "benchmark-ready"
+  ],
+  "visibility": "cross-lane",
+  "schema_version": "artifact-v1",
+  "title": "Long-Context Attention Mechanisms Survey",
+  "abstract": "Comparative analysis of sparse and linear attention mechanisms for long-context LLMs (100K-1M+ tokens). Covers Longformer, BigBird, LongNet, Linear Transformer, RWKV, and Mamba variants with complexity analysis and empirical bounds.",
+  "content": {
+    "sparse_attention": {
+      "mechanisms": [
+        {
+          "name": "Longformer",
+          "paper": "Beltagy et al. 2020",
+          "complexity": "O(n)",
+          "max_tested_context": "16K tokens",
+          "key_tradeoff": "Fixed local+global pattern, less flexible"
+        },
+        {
+          "name": "BigBird",
+          "paper": "Zaheer et al. 2020",
+          "complexity": "O(n)",
+          "max_tested_context": "4K tokens",
+          "key_tradeoff": "Random+window+global, needs tuning"
+        },
+        {
+          "name": "Sparse Transformer",
+          "paper": "Child et al. 2019",
+          "complexity": "O(n√n)",
+          "max_tested_context": "16K (audio domain)",
+          "key_tradeoff": "Factorized attention, domain-specific patterns"
+        },
+        {
+          "name": "LongNet",
+          "paper": "Ding et al. 2023",
+          "complexity": "O(n)",
+          "max_tested_context": "1B tokens (claimed)",
+          "key_tradeoff": "Dilated attention, limited independent validation"
+        }
+      ],
+      "summary": "Sparse methods achieve O(n) complexity but most validated benchmarks cap at 16-64K tokens."
+    },
+    "linear_attention": {
+      "mechanisms": [
+        {
+          "name": "Linear Transformer",
+          "paper": "Katharopoulos et al. 2020",
+          "complexity": "O(n)",
+          "max_tested_context": "4K tokens",
+          "key_tradeoff": "No softmax, quality degradation on long sequences"
+        },
+        {
+          "name": "RWKV",
+          "paper": "Peng et al. 2023",
+          "complexity": "O(n)",
+          "max_tested_context": "100K+ tokens",
+          "key_tradeoff": "RNN-like state, proven at scale"
+        },
+        {
+          "name": "Mamba",
+          "paper": "Gu & Dao 2023",
+          "complexity": "O(n)",
+          "max_tested_context": "1M tokens",
+          "key_tradeoff": "State-space model, hardware-efficient, strong benchmarks"
+        }
+      ],
+      "summary": "Linear/SSM methods show more promise for 1M+ contexts with Mamba leading in validated performance."
+    },
+    "recommendation": {
+      "for_1m_plus_tokens": "Mamba-class SSM architectures",
+      "rationale": "Best validated performance at extreme context lengths, hardware-efficient inference, proven training stability",
+      "caveat": "Hybrid sparse+SSM approaches emerging as strong contenders"
+    }
+  },
+  "references": [
+    "arxiv:2004.05150",
+    "arxiv:2007.14062", 
+    "arxiv:1904.10509",
+    "arxiv:2307.02486",
+    "arxiv:2006.16236",
+    "arxiv:2305.13048",
+    "arxiv:2312.00752"
+  ],
+  "cross_lane_hooks": {
+    "engineer": "Architecture implementation references",
+    "bench": "Benchmark methodology and metrics",
+    "lab": "Experiment design for validation",
+    "ops": "Deployment considerations"
+  }
+}

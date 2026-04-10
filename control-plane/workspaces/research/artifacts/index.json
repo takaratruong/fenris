@@ -1,0 +1,25 @@
+{
+  "index_version": "1.0.0",
+  "last_updated": "2026-04-10T05:20:00Z",
+  "lane": "research",
+  "artifacts": [
+    {
+      "artifact_id": "art_rs_001_attention_survey",
+      "type": "research_summary",
+      "title": "Long-Context Attention Mechanisms Survey",
+      "tags": ["attention-mechanisms", "long-context", "transformer", "llm-architecture"],
+      "visibility": "cross-lane",
+      "path": "artifacts/art_rs_001_attention_survey.json",
+      "created_at": "2026-04-10T05:20:00Z",
+      "task_id": "tsk_df3c37471a7b",
+      "thread_id": "thr_273344f47eeb"
+    }
+  ],
+  "schema": {
+    "artifact_id": "string (unique, format: art_{lane}_{seq}_{slug})",
+    "artifact_type": "enum: research_summary | evidence_collection | claim_support | literature_review | benchmark_data",
+    "visibility": "enum: lane-local | cross-lane | public",
+    "tags": "string[] (for discovery)",
+    "cross_lane_hooks": "object (lane -> relevance description)"
+  }
+}
