@@ -1,0 +1,33 @@
+{
+  "type": "object",
+  "required": ["server", "database"],
+  "properties": {
+    "server": {
+      "type": "object",
+      "required": ["host", "port"],
+      "properties": {
+        "host": { "type": "string", "minLength": 1 },
+        "port": { "type": ["string", "integer"] }
+      }
+    },
+    "database": {
+      "type": "object",
+      "required": ["url"],
+      "properties": {
+        "url": { "type": "string", "pattern": "^postgres://" },
+        "pool_size": { "type": "integer", "minimum": 1, "maximum": 100 }
+      }
+    },
+    "features": {
+      "type": "object",
+      "properties": {
+        "debug": { "type": "boolean" },
+        "cache_ttl": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "tags": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  }
+}

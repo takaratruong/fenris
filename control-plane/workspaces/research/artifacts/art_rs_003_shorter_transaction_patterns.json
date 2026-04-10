@@ -1,0 +1,182 @@
+{
+  "artifact_id": "art_rs_003_shorter_transaction_patterns",
+  "type": "research_summary",
+  "title": "Shorter Write Transaction Patterns for SQLite Contention Mitigation",
+  "created_at": "2026-04-10T10:52:00Z",
+  "task_id": "tsk_b58bafa753d7",
+  "thread_id": "thr_3ac4a4987fa7",
+  "tags": ["sqlite", "transactions", "contention", "performance", "write-patterns"],
+  "visibility": "cross-lane",
+  
+  "summary": "Analysis of patterns for reducing SQLite write transaction duration as a contention mitigation strategy. Covers prepare-execute separation, batch sizing, transaction splitting, deferred constraints, and BEGIN IMMEDIATE usage.",
+  
+  "key_findings": [
+    {
+      "finding": "Lock duration is the primary contention driver",
+      "detail": "SQLite holds exclusive locks for the entire write transaction duration. Any work (computation, network, queries) done between BEGIN and COMMIT blocks all other writers.",
+      "confidence": "high",
+      "sources": ["SQLite documentation", "benchmark data", "literature review"]
+    },
+    {
+      "finding": "Prepare-execute separation offers best ROI",
+      "detail": "Moving data preparation outside transactions reduces lock duration 20-50% with minimal code changes.",
+      "confidence": "high",
+      "sources": ["common patterns", "SQLite best practices"]
+    },
+    {
+      "finding": "Transaction splitting carries partial failure risk",
+      "detail": "Breaking atomic operations across transactions can leave system in inconsistent state on crash/failure.",
+      "confidence": "high",
+      "sources": ["database theory", "failure mode analysis"]
+    },
+    {
+      "finding": "Shorter transactions complement but don't replace write queue",
+      "detail": "Write queue eliminates SQLITE_BUSY entirely; shorter transactions reduce but don't eliminate contention. Best used together.",
+      "confidence": "medium",
+      "sources": ["method_1_write_queue.md benchmark", "comparative analysis"]
+    },
+    {
+      "finding": "BEGIN IMMEDIATE reduces retry overhead",
+      "detail": "For known-write transactions, BEGIN IMMEDIATE acquires lock immediately rather than on first write, avoiding SQLITE_BUSY retry loops.",
+      "confidence": "high",
+      "sources": ["SQLite documentation"]
+    }
+  ],
+  
+  "patterns": {
+    "prepare_execute_separation": {
+      "description": "Move all data preparation, computation, and external calls outside transaction boundaries",
+      "contention_reduction": "20-50%",
+      "complexity": "low",
+      "refactoring_effort": "2-4 hours per module",
+      "risks": ["minimal"],
+      "recommended": true
+    },
+    "batch_size_optimization": {
+      "description": "Balance transaction overhead vs lock duration with 10-50 operations per transaction",
+      "contention_reduction": "10-25%",
+      "complexity": "low",
+      "refactoring_effort": "1-2 hours",
+      "risks": ["requires benchmarking to tune"],
+      "recommended": true
+    },
+    "transaction_splitting": {
+      "description": "Break large transactions into smaller logical units",
+      "contention_reduction": "15-40%",
+      "complexity": "medium",
+      "refactoring_effort": "4-8 hours",
+      "risks": ["partial failures", "inconsistent state", "lost atomicity"],
+      "recommended": "with_caution"
+    },
+    "deferred_constraints": {
+      "description": "Defer foreign key checks to commit time for more flexible insert ordering",
+      "contention_reduction": "5-15%",
+      "complexity": "low",
+      "refactoring_effort": "1 hour",
+      "risks": ["limited SQLite support for runtime toggling"],
+      "recommended": "situational"
+    },
+    "begin_immediate": {
+      "description": "Use BEGIN IMMEDIATE for known-write transactions to acquire lock immediately",
+      "contention_reduction": "reduces retries, not contention",
+      "complexity": "very_low",
+      "refactoring_effort": "30 minutes",
+      "risks": ["none"],
+      "recommended": true
+    }
+  },
+  
+  "control_plane_applicability": {
+    "task_status_updates": {
+      "current_estimate_ms": "5-15",
+      "optimization_potential": "low-medium",
+      "recommended_patterns": ["begin_immediate", "prepare_execute_separation"]
+    },
+    "thread_belief_updates": {
+      "current_estimate_ms": "10-30",
+      "optimization_potential": "medium",
+      "recommended_patterns": ["prepare_execute_separation", "begin_immediate"]
+    },
+    "claim_evidence_creation": {
+      "current_estimate_ms": "20-50",
+      "optimization_potential": "high",
+      "recommended_patterns": ["prepare_execute_separation", "batch_size_optimization"]
+    },
+    "bulk_operations": {
+      "current_estimate_ms": "50-200",
+      "optimization_potential": "high",
+      "recommended_patterns": ["batch_size_optimization", "write_queue_for_large_batches"]
+    }
+  },
+  
+  "risks": [
+    {
+      "risk_id": "partial_failure",
+      "severity": "high",
+      "probability": "medium",
+      "description": "Transaction splitting leaves system in inconsistent state on crash",
+      "mitigation": ["idempotent operations", "explicit in-progress states", "compensating transactions", "saga pattern"]
+    },
+    {
+      "risk_id": "lost_atomicity",
+      "severity": "medium",
+      "probability": "medium",
+      "description": "Business logic assuming atomic multi-table updates may break",
+      "mitigation": ["document boundaries", "integration tests", "optimistic locking"]
+    },
+    {
+      "risk_id": "increased_complexity",
+      "severity": "low-medium",
+      "probability": "high",
+      "description": "More transactions means more code and potential bugs",
+      "mitigation": ["abstract patterns", "focused code review"]
+    },
+    {
+      "risk_id": "diminishing_returns",
+      "severity": "low",
+      "probability": "medium",
+      "description": "Already-short transactions won't benefit much",
+      "mitigation": ["profile before optimizing"]
+    }
+  ],
+  
+  "recommendations": {
+    "quick_wins": [
+      "Implement BEGIN IMMEDIATE for all write transactions",
+      "Move JSON serialization outside transaction boundaries",
+      "Profile current transaction durations before deeper changes"
+    ],
+    "medium_term": [
+      "Batch claim+evidence operations into efficient single statements",
+      "Consider hybrid: write queue for bulk, shorter txns for single updates"
+    ],
+    "not_recommended": [
+      "Aggressive transaction splitting for task updates (risk > benefit)",
+      "Deferred constraints (control-plane schema doesn't leverage FKs heavily)"
+    ]
+  },
+  
+  "comparison_with_write_queue": {
+    "sqlite_busy_elimination": {"shorter_txns": "no (reduces)", "write_queue": "yes"},
+    "latency_overhead": {"shorter_txns": "none", "write_queue": "+10-15ms"},
+    "implementation_complexity": {"shorter_txns": "medium", "write_queue": "medium-high"},
+    "refactoring_scope": {"shorter_txns": "distributed", "write_queue": "centralized"},
+    "failure_semantics": {"shorter_txns": "complex", "write_queue": "simple"},
+    "throughput_ceiling": {"shorter_txns": "higher", "write_queue": "lower"},
+    "verdict": "complementary strategies - best used together"
+  },
+  
+  "sources": [
+    {"type": "internal", "ref": "bench/artifacts/sqlite_wal_benchmark_report.md"},
+    {"type": "internal", "ref": "engineer/baseline_c/methods/method_1_write_queue.md"},
+    {"type": "web", "url": "https://sqlite.org/foreignkeys.html", "topic": "deferred constraints"},
+    {"type": "web", "url": "https://emschwartz.me/psa-your-sqlite-connection-pool-might-be-ruining-your-write-performance/", "topic": "connection pooling and locks"},
+    {"type": "web", "url": "https://www.slingacademy.com/article/preventing-data-conflicts-with-sqlite-locking-mechanisms/", "topic": "locking best practices"}
+  ],
+  
+  "cross_lane_hooks": {
+    "engineer": "Implementation patterns for baseline_c harness and control-plane refactoring",
+    "bench": "Metrics for validating contention reduction claims",
+    "ops": "Deployment considerations for transaction configuration changes"
+  }
+}

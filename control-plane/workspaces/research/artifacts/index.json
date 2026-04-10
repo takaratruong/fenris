@@ -1,6 +1,6 @@
 {
   "index_version": "1.0.0",
-  "last_updated": "2026-04-10T09:33:00Z",
+  "last_updated": "2026-04-10T10:52:00Z",
   "lane": "research",
   "artifacts": [
     {
@@ -24,6 +24,17 @@
       "created_at": "2026-04-10T09:33:00Z",
       "task_id": "tsk_cc320792c32e",
       "thread_id": "thr_84edcaebb0e1"
+    },
+    {
+      "artifact_id": "art_rs_003_shorter_transaction_patterns",
+      "type": "research_summary",
+      "title": "Shorter Write Transaction Patterns for SQLite Contention Mitigation",
+      "tags": ["sqlite", "transactions", "contention", "performance", "write-patterns"],
+      "visibility": "cross-lane",
+      "path": "artifacts/art_rs_003_shorter_transaction_patterns.json",
+      "created_at": "2026-04-10T10:52:00Z",
+      "task_id": "tsk_b58bafa753d7",
+      "thread_id": "thr_3ac4a4987fa7"
     }
   ],
   "schema": {

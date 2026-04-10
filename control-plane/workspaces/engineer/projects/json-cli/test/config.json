@@ -1,0 +1,15 @@
+{
+  "server": {
+    "host": "localhost",
+    "port": "3000"
+  },
+  "database": {
+    "url": "postgres://localhost/mydb",
+    "pool_size": 10
+  },
+  "features": {
+    "debug": true,
+    "cache_ttl": 300
+  },
+  "tags": ["api", "production"]
+}

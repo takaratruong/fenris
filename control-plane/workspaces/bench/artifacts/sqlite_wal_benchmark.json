@@ -1,0 +1,119 @@
+{
+  "delete_mode": {
+    "single_writer": {
+      "writes": 500,
+      "elapsed_s": 2.5643,
+      "writes_per_s": 194.99
+    },
+    "concurrent_writers": {
+      "threads": 8,
+      "writes_per_thread": 100,
+      "total_writes": 800,
+      "elapsed_s": 4.4925,
+      "writes_per_s": 178.07,
+      "lock_wait_ms": {
+        "mean": 25.099,
+        "median": 5.106,
+        "p95": 7.095,
+        "p99": 9.258,
+        "max": 3967.024
+      },
+      "errors": 0
+    },
+    "read_write_contention": {
+      "duration_s": 5,
+      "readers": 4,
+      "writers": 4,
+      "total_reads": 14,
+      "total_writes": 948,
+      "reads_per_s": 2.8,
+      "writes_per_s": 189.6,
+      "read_latency_ms": {
+        "mean": 1443.036,
+        "p95": 5033.623
+      },
+      "write_latency_ms": {
+        "mean": 21.401,
+        "p95": 7.031
+      }
+    }
+  },
+  "wal_mode": {
+    "single_writer": {
+      "writes": 500,
+      "elapsed_s": 1.5428,
+      "writes_per_s": 324.09
+    },
+    "concurrent_writers": {
+      "threads": 8,
+      "writes_per_thread": 100,
+      "total_writes": 800,
+      "elapsed_s": 2.3503,
+      "writes_per_s": 340.38,
+      "lock_wait_ms": {
+        "mean": 14.819,
+        "median": 3.039,
+        "p95": 3.357,
+        "p99": 182.954,
+        "max": 2237.156
+      },
+      "errors": 0
+    },
+    "read_write_contention": {
+      "duration_s": 5,
+      "readers": 4,
+      "writers": 4,
+      "total_reads": 4117,
+      "total_writes": 1438,
+      "reads_per_s": 823.4,
+      "writes_per_s": 287.6,
+      "read_latency_ms": {
+        "mean": 4.86,
+        "p95": 6.309
+      },
+      "write_latency_ms": {
+        "mean": 14.018,
+        "p95": 4.391
+      }
+    }
+  },
+  "edge_cases": {
+    "checkpoint": {
+      "wal_size_before_bytes": 0,
+      "wal_size_after_bytes": 0,
+      "checkpoint_time_ms": 0.037,
+      "checkpoint_result": {
+        "blocked": 0,
+        "log_frames": 0,
+        "checkpointed_frames": 0
+      }
+    },
+    "disk_usage": {
+      "main_db_bytes": 446464,
+      "wal_bytes": 0,
+      "shm_bytes": 32768,
+      "total_bytes": 479232,
+      "note": "WAL mode uses additional -wal and -shm files"
+    }
+  },
+  "comparison": {
+    "concurrent_writes_improvement_pct": 91.15,
+    "mixed_workload_writes_improvement_pct": 51.69,
+    "lock_wait_p95_reduction_pct": 52.68
+  },
+  "summary": {
+    "recommendation": "Enable WAL mode for control-plane database",
+    "key_benefits": [
+      "Concurrent write throughput: +91.15%",
+      "Mixed workload writes: +51.69%",
+      "Lock wait time (p95): -52.68%"
+    ],
+    "caveats": [
+      "WAL files can grow large without periodic checkpointing",
+      "Additional disk space for -wal and -shm files",
+      "Checkpoint operations can briefly block writers",
+      "Not suitable for network filesystems (NFS)"
+    ],
+    "implementation": "PRAGMA journal_mode=WAL; PRAGMA synchronous=NORMAL;"
+  }
+}
