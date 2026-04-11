@@ -1,0 +1,46 @@
+{
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "errors": 0,
+    "total": 6
+  },
+  "results": [
+    {
+      "test": "interrupted_db_operation",
+      "status": "PASS",
+      "details": "Rollback correctly prevented partial write",
+      "timestamp": "2026-04-10T17:52:19.021600"
+    },
+    {
+      "test": "partial_write_recovery",
+      "status": "PASS",
+      "details": "Atomic write pattern protected original file",
+      "timestamp": "2026-04-10T17:52:19.021820"
+    },
+    {
+      "test": "timeout_handling",
+      "status": "PASS",
+      "details": "Timeout correctly detected long-running operation",
+      "timestamp": "2026-04-10T17:52:19.122356"
+    },
+    {
+      "test": "retry_logic",
+      "status": "PASS",
+      "details": "Retry succeeded after 3 attempts with backoff",
+      "timestamp": "2026-04-10T17:52:19.152593"
+    },
+    {
+      "test": "task_state_recovery",
+      "status": "PASS",
+      "details": "Orphaned task correctly transitioned to failed with recovery metadata",
+      "timestamp": "2026-04-10T17:52:19.159532"
+    },
+    {
+      "test": "concurrent_write_conflict",
+      "status": "PASS",
+      "details": "SQLite locking prevents concurrent write conflicts",
+      "timestamp": "2026-04-10T17:52:24.171362"
+    }
+  ]
+}

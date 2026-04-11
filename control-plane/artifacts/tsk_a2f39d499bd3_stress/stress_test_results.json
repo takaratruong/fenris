@@ -1,0 +1,19 @@
+{
+  "test_id": "stress_1775841909",
+  "timestamp": "2026-04-10T17:25:09+00:00",
+  "worker_count": 5,
+  "artifacts": [
+    {"worker": 1, "verification": "OK", "checksum_match": true}
+,
+    {"worker": 2, "verification": "OK", "checksum_match": true}
+,
+    {"worker": 3, "verification": "OK", "checksum_match": true}
+,
+    {"worker": 4, "verification": "OK", "checksum_match": true}
+,
+    {"worker": 5, "verification": "OK", "checksum_match": true}
+
+  ],
+  "all_valid": true,
+  "completed_at": "2026-04-10T17:25:09+00:00"
+}

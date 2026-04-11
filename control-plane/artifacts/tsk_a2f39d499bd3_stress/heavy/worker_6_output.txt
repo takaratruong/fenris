@@ -1,0 +1,6 @@
+DB insert retry needed for w6 i1
+W6:I1:74abacf7a8be807f0d8762b0a89f903286d3a8d2bab76e7049694597b70316c5
+DB insert retry needed for w6 i2
+W6:I2:9a63597c7f43f39588814c5b6ffedb1038edeca52654cef7590172d79035fb97
+DB insert retry needed for w6 i3
+W6:I3:b06607b2452247a1d27cd1c25e359adbaa96b31617f80a20700b924d1456befe

@@ -1,0 +1,6 @@
+DB insert retry needed for w10 i1
+W10:I1:f7f73f25a288c3a988f03360ddc6412e5228d132dc6990d4f66e7d8138c0bc79
+DB insert retry needed for w10 i2
+W10:I2:be31c5f529e2ac3cd0ffee6a8da3fa2bbc512a3c2cde523d8ae60482e52588f7
+DB insert retry needed for w10 i3
+W10:I3:aa7cdc4e790e5cb2efba04c4f341f5af583a3fb240933e9e798699f6f518946a

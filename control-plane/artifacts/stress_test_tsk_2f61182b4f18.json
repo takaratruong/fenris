@@ -1,0 +1,35 @@
+{
+  "test_id": "stress_test_2026_04_10_17_29",
+  "task_id": "tsk_2f61182b4f18",
+  "thread_id": "thr_3b7face815f4",
+  "test_start": "2026-04-10T17:29:00Z",
+  "test_phases": [
+    {
+      "phase": 1,
+      "name": "Worker Discovery",
+      "description": "Enumerate all available workers"
+    },
+    {
+      "phase": 2,
+      "name": "Parallel Task Creation",
+      "description": "Create 12 concurrent tasks for stress testing"
+    },
+    {
+      "phase": 3,
+      "name": "Claim Race Test",
+      "description": "Verify no race conditions in claim acquisition"
+    },
+    {
+      "phase": 4,
+      "name": "Heartbeat Verification",
+      "description": "Check heartbeat mechanisms work correctly"
+    },
+    {
+      "phase": 5,
+      "name": "Handoff Test",
+      "description": "Test task handoff between workers"
+    }
+  ],
+  "workers_discovered": [],
+  "results": {}
+}

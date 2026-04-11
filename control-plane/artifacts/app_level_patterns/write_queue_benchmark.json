@@ -1,0 +1,39 @@
+{
+  "benchmark_id": "write_queue_stress_test_3",
+  "task_id": "tsk_45b73ece21b8",
+  "thread_id": "thr_3ac4a4987fa7",
+  "timestamp": "2026-04-10T15:22:00+00:00",
+  "pattern": "write_queue_serialization",
+  "description": "Single writer thread serializes all concurrent writes via FIFO queue",
+  "test_configuration": {
+    "concurrent_writers": 100,
+    "duration_seconds": 60,
+    "journal_mode": "WAL",
+    "matches_stress_test_3": true
+  },
+  "results": {
+    "total_writes_attempted": 437435,
+    "total_writes_succeeded": 437435,
+    "total_writes_failed": 0,
+    "success_rate": 1.0,
+    "throughput_writes_per_sec": 7283.51,
+    "elapsed_seconds": 60.06,
+    "sqlite_busy_count": 0
+  },
+  "latency_ms": {
+    "min": 8.39,
+    "avg": 12.55,
+    "p50": 11.05,
+    "p95": 20.35,
+    "p99": 21.44,
+    "max": 26.03
+  },
+  "verdict": {
+    "p99_target_ms": 1000,
+    "p99_actual_ms": 21.44,
+    "p99_pass": true,
+    "margin_factor": 46.6
+  },
+  "source_benchmark": "/home/ubuntu/.openclaw/workspace/control-plane/workspaces/engineer/write_queue_benchmark/results.json",
+  "implementation": "/home/ubuntu/.openclaw/workspace/control-plane/workspaces/engineer/write_queue_benchmark/benchmark.py"
+}

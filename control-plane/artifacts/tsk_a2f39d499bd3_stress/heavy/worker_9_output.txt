@@ -1,0 +1,6 @@
+DB insert retry needed for w9 i1
+W9:I1:d3d7547e872c46d114a64fd445fd9ff377bd5680a59e90afed6574ec3d0b84ad
+DB insert retry needed for w9 i2
+W9:I2:1720d0ac079f0eefdf2c890544e720f14319875609ba71ed9352c63d96cd0632
+DB insert retry needed for w9 i3
+W9:I3:64f87c1ad489b19d072a1374250a20dd33e52e2b2af3d76d01a5ef6093fc4dc1

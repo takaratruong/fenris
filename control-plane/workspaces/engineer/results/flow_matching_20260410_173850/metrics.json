@@ -1,0 +1,12 @@
+{
+  "method": "flow_matching",
+  "n_epochs": 2000,
+  "batch_size": 256,
+  "training_time_seconds": 6.5966796875,
+  "final_loss": 1.9932172298431396,
+  "mean_loss_last_100": 1.8845477497577667,
+  "sample_time_1000": 0.09917163848876953,
+  "samples_per_second": 10083.528065468463,
+  "device": "cpu",
+  "model_params": 37762
+}

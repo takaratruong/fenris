@@ -1,0 +1,209 @@
+{
+  "test_name": "cross_worker_message_relay",
+  "started_at": "2026-04-10T17:25:24.136224",
+  "completed_at": "2026-04-10T17:25:24.136229",
+  "worker_pairs_tested": [
+    "research-engineer",
+    "engineer-bench",
+    "bench-ops",
+    "research-bench",
+    "ops-research"
+  ],
+  "payload_sizes_bytes": [
+    64,
+    256,
+    1024,
+    4096
+  ],
+  "total_tests": 20,
+  "passed": 20,
+  "failed": 0,
+  "success_rate_percent": 100.0,
+  "latency_stats": {
+    "min_ms": 1.181,
+    "max_ms": 1.28,
+    "avg_ms": 1.218
+  },
+  "test_results": [
+    {
+      "from": "research",
+      "to": "engineer",
+      "payload_size": 64,
+      "latency_ms": 1.28,
+      "integrity_ok": true,
+      "original_hash": "8d786871f43df363...",
+      "received_hash": "8d786871f43df363..."
+    },
+    {
+      "from": "engineer",
+      "to": "bench",
+      "payload_size": 64,
+      "latency_ms": 1.225,
+      "integrity_ok": true,
+      "original_hash": "48a70c00d233ad8b...",
+      "received_hash": "48a70c00d233ad8b..."
+    },
+    {
+      "from": "bench",
+      "to": "ops",
+      "payload_size": 64,
+      "latency_ms": 1.218,
+      "integrity_ok": true,
+      "original_hash": "8e5439203afbbec6...",
+      "received_hash": "8e5439203afbbec6..."
+    },
+    {
+      "from": "research",
+      "to": "bench",
+      "payload_size": 64,
+      "latency_ms": 1.196,
+      "integrity_ok": true,
+      "original_hash": "507fcb326ad77a74...",
+      "received_hash": "507fcb326ad77a74..."
+    },
+    {
+      "from": "ops",
+      "to": "research",
+      "payload_size": 64,
+      "latency_ms": 1.223,
+      "integrity_ok": true,
+      "original_hash": "266539d82d66a853...",
+      "received_hash": "266539d82d66a853..."
+    },
+    {
+      "from": "research",
+      "to": "engineer",
+      "payload_size": 256,
+      "latency_ms": 1.22,
+      "integrity_ok": true,
+      "original_hash": "0c043a6417e705b5...",
+      "received_hash": "0c043a6417e705b5..."
+    },
+    {
+      "from": "engineer",
+      "to": "bench",
+      "payload_size": 256,
+      "latency_ms": 1.213,
+      "integrity_ok": true,
+      "original_hash": "c6c650af380812fc...",
+      "received_hash": "c6c650af380812fc..."
+    },
+    {
+      "from": "bench",
+      "to": "ops",
+      "payload_size": 256,
+      "latency_ms": 1.221,
+      "integrity_ok": true,
+      "original_hash": "7dc07aaa7bf25c80...",
+      "received_hash": "7dc07aaa7bf25c80..."
+    },
+    {
+      "from": "research",
+      "to": "bench",
+      "payload_size": 256,
+      "latency_ms": 1.223,
+      "integrity_ok": true,
+      "original_hash": "17744c0ea03c5a17...",
+      "received_hash": "17744c0ea03c5a17..."
+    },
+    {
+      "from": "ops",
+      "to": "research",
+      "payload_size": 256,
+      "latency_ms": 1.212,
+      "integrity_ok": true,
+      "original_hash": "1b215e3a01d9176d...",
+      "received_hash": "1b215e3a01d9176d..."
+    },
+    {
+      "from": "research",
+      "to": "engineer",
+      "payload_size": 1024,
+      "latency_ms": 1.225,
+      "integrity_ok": true,
+      "original_hash": "b08ce9c9e54aad43...",
+      "received_hash": "b08ce9c9e54aad43..."
+    },
+    {
+      "from": "engineer",
+      "to": "bench",
+      "payload_size": 1024,
+      "latency_ms": 1.215,
+      "integrity_ok": true,
+      "original_hash": "bab3e9822d50ee28...",
+      "received_hash": "bab3e9822d50ee28..."
+    },
+    {
+      "from": "bench",
+      "to": "ops",
+      "payload_size": 1024,
+      "latency_ms": 1.219,
+      "integrity_ok": true,
+      "original_hash": "546f2f802dc3541f...",
+      "received_hash": "546f2f802dc3541f..."
+    },
+    {
+      "from": "research",
+      "to": "bench",
+      "payload_size": 1024,
+      "latency_ms": 1.236,
+      "integrity_ok": true,
+      "original_hash": "6752c760462c8086...",
+      "received_hash": "6752c760462c8086..."
+    },
+    {
+      "from": "ops",
+      "to": "research",
+      "payload_size": 1024,
+      "latency_ms": 1.213,
+      "integrity_ok": true,
+      "original_hash": "9fc0d84334d62d35...",
+      "received_hash": "9fc0d84334d62d35..."
+    },
+    {
+      "from": "research",
+      "to": "engineer",
+      "payload_size": 4096,
+      "latency_ms": 1.212,
+      "integrity_ok": true,
+      "original_hash": "fa8e2860cf9268bd...",
+      "received_hash": "fa8e2860cf9268bd..."
+    },
+    {
+      "from": "engineer",
+      "to": "bench",
+      "payload_size": 4096,
+      "latency_ms": 1.211,
+      "integrity_ok": true,
+      "original_hash": "b2d5429bbe4991f6...",
+      "received_hash": "b2d5429bbe4991f6..."
+    },
+    {
+      "from": "bench",
+      "to": "ops",
+      "payload_size": 4096,
+      "latency_ms": 1.181,
+      "integrity_ok": true,
+      "original_hash": "43576a720c18df24...",
+      "received_hash": "43576a720c18df24..."
+    },
+    {
+      "from": "research",
+      "to": "bench",
+      "payload_size": 4096,
+      "latency_ms": 1.214,
+      "integrity_ok": true,
+      "original_hash": "15bf194f5dbbc701...",
+      "received_hash": "15bf194f5dbbc701..."
+    },
+    {
+      "from": "ops",
+      "to": "research",
+      "payload_size": 4096,
+      "latency_ms": 1.211,
+      "integrity_ok": true,
+      "original_hash": "c8f1785e4fd993d6...",
+      "received_hash": "c8f1785e4fd993d6..."
+    }
+  ]
+}

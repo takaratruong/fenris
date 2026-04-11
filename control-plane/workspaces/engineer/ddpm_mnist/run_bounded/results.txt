@@ -1,0 +1,16 @@
+MNIST DDPM Training - Bounded Run
+========================================
+Device: cuda
+Base channels: 4
+Parameters: 22,137
+Epochs completed: 70
+Total batches: 16436
+Final loss: 0.0292
+Training time: 180.1s
+Sampling time: 4.2s
+Total time: 184.3s
+
+Artifacts:
+- /home/ubuntu/.openclaw/workspace/control-plane/workspaces/engineer/ddpm_mnist/run_bounded/denoising_progression.png (8 samples x denoising steps)
+- /home/ubuntu/.openclaw/workspace/control-plane/workspaces/engineer/ddpm_mnist/run_bounded/final_samples_8x8.png (64 final samples)
+- /home/ubuntu/.openclaw/workspace/control-plane/workspaces/engineer/ddpm_mnist/run_bounded/checkpoint.pt

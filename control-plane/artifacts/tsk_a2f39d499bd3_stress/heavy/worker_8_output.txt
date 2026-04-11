@@ -1,0 +1,6 @@
+DB insert retry needed for w8 i1
+W8:I1:99390e6edf446b31a9585ba8af29692a72cb3e4f99f4f8cd5595794512c7a7f0
+DB insert retry needed for w8 i2
+W8:I2:35cda3faead88ef96e9a0d9fc57a292f61ede415f31823d8ed87938642704825
+DB insert retry needed for w8 i3
+W8:I3:01e6f49b2b8ed8508d946001b9b331617a78b3070c873519200b69b9edc70f72

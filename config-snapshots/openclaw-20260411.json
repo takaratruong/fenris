@@ -1,0 +1,139 @@
+{
+  "meta": {
+    "lastTouchedVersion": "2026.4.9",
+    "lastTouchedAt": "2026-04-09T06:23:18.821Z"
+  },
+  "wizard": {
+    "lastRunAt": "2026-03-30T17:54:08.099Z",
+    "lastRunVersion": "2026.3.24",
+    "lastRunCommand": "doctor",
+    "lastRunMode": "local"
+  },
+  "agents": {
+    "defaults": {
+      "model": {
+        "primary": "amazon-bedrock/us.anthropic.claude-opus-4-5-20251101-v1:0",
+        "fallbacks": []
+      },
+      "models": {
+        "amazon-bedrock/us.anthropic.claude-opus-4-5-20251101-v1:0": {}
+      },
+      "contextTokens": 100000,
+      "memorySearch": {
+        "enabled": false
+      },
+      "compaction": {
+        "mode": "default",
+        "keepRecentTokens": 20000,
+        "maxHistoryShare": 0.3,
+        "recentTurnsPreserve": 5
+      }
+    },
+    "list": [
+      {
+        "id": "main"
+      },
+      {
+        "id": "dr_fenris",
+        "name": "dr_fenris",
+        "workspace": "/home/ubuntu/dr_fenris_workspace",
+        "agentDir": "/home/ubuntu/.openclaw/agents/dr_fenris/agent",
+        "model": "amazon-bedrock/us.anthropic.claude-opus-4-5-20251101-v1:0"
+      },
+      {
+        "id": "engineer",
+        "name": "engineer",
+        "workspace": "/home/ubuntu/.openclaw/workspace/control-plane/workspaces/engineer",
+        "agentDir": "/home/ubuntu/.openclaw/agents/engineer/agent",
+        "model": "amazon-bedrock/us.anthropic.claude-opus-4-5-20251101-v1:0"
+      },
+      {
+        "id": "research",
+        "name": "research",
+        "workspace": "/home/ubuntu/.openclaw/workspace/control-plane/workspaces/research",
+        "agentDir": "/home/ubuntu/.openclaw/agents/research/agent",
+        "model": "amazon-bedrock/us.anthropic.claude-opus-4-5-20251101-v1:0"
+      },
+      {
+        "id": "orchestrator",
+        "name": "orchestrator",
+        "workspace": "/home/ubuntu/.openclaw/workspace/control-plane/workspaces/orchestrator",
+        "agentDir": "/home/ubuntu/.openclaw/agents/orchestrator/agent",
+        "model": "amazon-bedrock/us.anthropic.claude-opus-4-5-20251101-v1:0"
+      },
+      {
+        "id": "bench",
+        "name": "bench",
+        "workspace": "/home/ubuntu/.openclaw/workspace/control-plane/workspaces/bench",
+        "agentDir": "/home/ubuntu/.openclaw/agents/bench/agent",
+        "model": "amazon-bedrock/us.anthropic.claude-opus-4-5-20251101-v1:0"
+      },
+      {
+        "id": "lab",
+        "name": "lab",
+        "workspace": "/home/ubuntu/.openclaw/workspace/control-plane/workspaces/lab",
+        "agentDir": "/home/ubuntu/.openclaw/agents/lab/agent",
+        "model": "amazon-bedrock/us.anthropic.claude-opus-4-5-20251101-v1:0"
+      },
+      {
+        "id": "ops",
+        "name": "ops",
+        "workspace": "/home/ubuntu/.openclaw/workspace/control-plane/workspaces/ops",
+        "agentDir": "/home/ubuntu/.openclaw/agents/ops/agent",
+        "model": "amazon-bedrock/us.anthropic.claude-opus-4-5-20251101-v1:0"
+      },
+      {
+        "id": "chief_of_staff",
+        "name": "chief_of_staff",
+        "workspace": "/home/ubuntu/.openclaw/workspace/control-plane/workspaces/chief_of_staff",
+        "agentDir": "/home/ubuntu/.openclaw/agents/chief_of_staff/agent",
+        "model": "amazon-bedrock/us.anthropic.claude-opus-4-5-20251101-v1:0"
+      }
+    ]
+  },
+  "tools": {},
+  "commands": {
+    "native": "auto",
+    "nativeSkills": "auto",
+    "restart": true,
+    "ownerDisplay": "raw"
+  },
+  "channels": {
+    "discord": {
+      "enabled": true,
+      "token": {
+        "source": "env",
+        "provider": "default",
+        "id": "DISCORD_BOT_TOKEN"
+      },
+      "groupPolicy": "open",
+      "historyLimit": 10,
+      "dmHistoryLimit": 10,
+      "streaming": {
+        "mode": "off"
+      },
+      "guilds": {
+        "1488245505468141608": {
+          "requireMention": false
+        }
+      },
+      "allowFrom": [
+        "158790414243987456"
+      ]
+    }
+  },
+  "gateway": {
+    "mode": "local",
+    "auth": {
+      "mode": "token",
+      "token": "REDACTED"
+    }
+  },
+  "plugins": {
+    "entries": {
+      "amazon-bedrock": {
+        "enabled": true
+      }
+    }
+  }
+}

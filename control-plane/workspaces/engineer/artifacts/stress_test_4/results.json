@@ -1,0 +1,42 @@
+{
+  "test_config": {
+    "num_readers": 50,
+    "num_writers": 50,
+    "duration_seconds": 60,
+    "actual_duration_seconds": 60.51721906661987,
+    "database_path": "/home/ubuntu/.openclaw/workspace/control-plane/workspaces/engineer/artifacts/stress_test_4/stress_test.db"
+  },
+  "throughput": {
+    "total_ops": 46736,
+    "total_ops_per_sec": 772.2760682137603,
+    "read_ops": 35699,
+    "read_ops_per_sec": 589.8982231933205,
+    "write_ops": 11037,
+    "write_ops_per_sec": 182.37784502043974
+  },
+  "read_latency_seconds": {
+    "mean": 0.08426910928696041,
+    "p50": 0.004907749593257904,
+    "p95": 0.26589811965823174,
+    "p99": 0.28208834771066904,
+    "max": 0.30918555706739426
+  },
+  "write_latency_seconds": {
+    "mean": 0.2725333635842694,
+    "p50": 0.010711937211453915,
+    "p95": 1.635584088973701,
+    "p99": 3.636383632197976,
+    "max": 9.348747010342777
+  },
+  "errors": {
+    "read_errors": 0,
+    "write_errors": 0,
+    "total_errors": 0
+  },
+  "baseline_comparison": {
+    "baseline_write_ops_per_sec": 834,
+    "baseline_p99_sec": 2.7,
+    "mixed_write_vs_baseline_throughput": "21.9%",
+    "mixed_write_p99_vs_baseline": "134.7%"
+  }
+}

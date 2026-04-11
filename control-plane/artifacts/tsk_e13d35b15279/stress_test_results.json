@@ -1,0 +1,471 @@
+{
+  "task_id": "tsk_e13d35b15279",
+  "started_at": "2026-04-10T17:50:24.413680+00:00",
+  "tests": [
+    {
+      "test_type": "thread_pool",
+      "workers": 5,
+      "size_kb": 100,
+      "total_time_ms": 3.746429458260536,
+      "successes": 5,
+      "failures": 0,
+      "total_bytes": 512000,
+      "throughput_mbps": 130.33242863371797,
+      "avg_write_time_ms": 1.869909092783928,
+      "results": [
+        {
+          "worker_id": 0,
+          "filename": "concurrent_worker_0.dat",
+          "size_bytes": 102400,
+          "write_time_ms": 2.1644914522767067,
+          "checksum": "7772626568db41fbed81003a00a1265ffcfc2becd6dd721030cb37d1d1ded107",
+          "success": true,
+          "error": ""
+        },
+        {
+          "worker_id": 1,
+          "filename": "concurrent_worker_1.dat",
+          "size_bytes": 102400,
+          "write_time_ms": 2.4742456153035164,
+          "checksum": "92026196932dfa3d2d4f99c9f14e4330adcd4c1c307fb7ba8a882a0e1eb4fb5e",
+          "success": true,
+          "error": ""
+        },
+        {
+          "worker_id": 2,
+          "filename": "concurrent_worker_2.dat",
+          "size_bytes": 102400,
+          "write_time_ms": 1.9506597891449928,
+          "checksum": "fbe9aa827f2d0c1742917946b0de27d6b57c0f12a6ed5f757aff8c376a9946a2",
+          "success": true,
+          "error": ""
+        },
+        {
+          "worker_id": 3,
+          "filename": "concurrent_worker_3.dat",
+          "size_bytes": 102400,
+          "write_time_ms": 1.6169771552085876,
+          "checksum": "df653959513c591d8bb01440f1bf26ac60b34651731f307d2c0e3046f5744245",
+          "success": true,
+          "error": ""
+        },
+        {
+          "worker_id": 4,
+          "filename": "concurrent_worker_4.dat",
+          "size_bytes": 102400,
+          "write_time_ms": 1.143171451985836,
+          "checksum": "c8493e9d7959225a3836123df4b16b4f2d61b662679d7fa26daa9d00e95878fc",
+          "success": true,
+          "error": ""
+        }
+      ]
+    },
+    {
+      "test_type": "thread_pool",
+      "workers": 10,
+      "size_kb": 200,
+      "total_time_ms": 6.844331510365009,
+      "successes": 10,
+      "failures": 0,
+      "total_bytes": 2048000,
+      "throughput_mbps": 285.3638806130592,
+      "avg_write_time_ms": 3.458694089204073,
+      "results": [
+        {
+          "worker_id": 0,
+          "filename": "concurrent_worker_0.dat",
+          "size_bytes": 204800,
+          "write_time_ms": 4.22737468034029,
+          "checksum": "3a04a6b03e18f133ee4e0d88275683c925bb36383b1251f65383a41f4e50d4de",
+          "success": true,
+          "error": ""
+        },
+        {
+          "worker_id": 1,
+          "filename": "concurrent_worker_1.dat",
+          "size_bytes": 204800,
+          "write_time_ms": 3.2169539481401443,
+          "checksum": "c6d7f738cd0bb2ad4daa719313fcf270f30a8c4b0a29c562848ea6983420a879",
+          "success": true,
+          "error": ""
+        },
+        {
+          "worker_id": 2,
+          "filename": "concurrent_worker_2.dat",
+          "size_bytes": 204800,
+          "write_time_ms": 4.079592414200306,
+          "checksum": "a42a10474d5d3a45416bd2fd386e7d6b3bc593775f897e035efd33de209fc513",
+          "success": true,
+          "error": ""
+        },
+        {
+          "worker_id": 3,
+          "filename": "concurrent_worker_3.dat",
+          "size_bytes": 204800,
+          "write_time_ms": 3.6644376814365387,
+          "checksum": "c027742552a71203bbec3713b8f6a3655976f43bb0f3d762aa9e846637e2a34c",
+          "success": true,
+          "error": ""
+        },
+        {
+          "worker_id": 4,
+          "filename": "concurrent_worker_4.dat",
+          "size_bytes": 204800,
+          "write_time_ms": 4.236874170601368,
+          "checksum": "5cad05878a6adf283ba5be1fd3bb5f9acac3fa0881263d155961caf530f1fe1f",
+          "success": true,
+          "error": ""
+        },
+        {
+          "worker_id": 5,
+          "filename": "concurrent_worker_5.dat",
+          "size_bytes": 204800,
+          "write_time_ms": 3.628438338637352,
+          "checksum": "7f12bff59928a9133433a7df2542055e095129765c1c222ba2677140b1f40b92",
+          "success": true,
+          "error": ""
+        },
+        {
+          "worker_id": 6,
+          "filename": "concurrent_worker_6.dat",
+          "size_bytes": 204800,
+          "write_time_ms": 2.9336605221033096,
+          "checksum": "3bab8a001851beedec3a4590e7c66af990f715b9fddd5c16ac6fe850a2d8dada",
+          "success": true,
+          "error": ""
+        },
+        {
+          "worker_id": 7,
+          "filename": "concurrent_worker_7.dat",
+          "size_bytes": 204800,
+          "write_time_ms": 3.3254148438572884,
+          "checksum": "9f30646a0a9769de2d4224b83bb971f2e1094c26eefc27c05dd49cc0d6528dfd",
+          "success": true,
+          "error": ""
+        },
+        {
+          "worker_id": 8,
+          "filename": "concurrent_worker_8.dat",
+          "size_bytes": 204800,
+          "write_time_ms": 2.631097100675106,
+          "checksum": "b2a0ea08c5b946f41ddcd6bb605d65ad716dca73b117f21de5953200a0d285c5",
+          "success": true,
+          "error": ""
+        },
+        {
+          "worker_id": 9,
+          "filename": "concurrent_worker_9.dat",
+          "size_bytes": 204800,
+          "write_time_ms": 2.6430971920490265,
+          "checksum": "25d9fbabb458cd2215766bc6508617b2092d93dff485557d9670148a3a1eb301",
+          "success": true,
+          "error": ""
+        }
+      ]
+    },
+    {
+      "test_type": "asyncio",
+      "workers": 8,
+      "size_kb": 150,
+      "total_time_ms": 4.964500665664673,
+      "successes": 8,
+      "failures": 0,
+      "total_bytes": 1228800,
+      "throughput_mbps": 236.05093017811154,
+      "avg_write_time_ms": 2.8083837823942304,
+      "results": [
+        {
+          "worker_id": 100,
+          "filename": "concurrent_worker_100.dat",
+          "size_bytes": 153600,
+          "write_time_ms": 2.7508875355124474,
+          "checksum": "ef2af9011049491b5af74bb39f9124f898f9d1e2a4c1e53649c6cd2c6024ff0b",
+          "success": true,
+          "error": ""
+        },
+        {
+          "worker_id": 101,
+          "filename": "concurrent_worker_101.dat",
+          "size_bytes": 153600,
+          "write_time_ms": 3.302264027297497,
+          "checksum": "d6a64e3a199d7b32f11b8b256ecba882b7e95e828d7b972a4a5defd193becefa",
+          "success": true,
+          "error": ""
+        },
+        {
+          "worker_id": 102,
+          "filename": "concurrent_worker_102.dat",
+          "size_bytes": 153600,
+          "write_time_ms": 2.5585759431123734,
+          "checksum": "bfb81e300fefdcb061226d1a8f960134cfd113f9cf2031dd2f36406faead0a14",
+          "success": true,
+          "error": ""
+        },
+        {
+          "worker_id": 103,
+          "filename": "concurrent_worker_103.dat",
+          "size_bytes": 153600,
+          "write_time_ms": 3.7413788959383965,
+          "checksum": "435a87c9642680a7769e5f2d50c0ba439bda719f35b05d3e02e2f99a6dc75007",
+          "success": true,
+          "error": ""
+        },
+        {
+          "worker_id": 104,
+          "filename": "concurrent_worker_104.dat",
+          "size_bytes": 153600,
+          "write_time_ms": 2.4932147935032845,
+          "checksum": "065d8e788a648109007055422443d8830b5e080c8f700d4a5c5462905fa1a6f2",
+          "success": true,
+          "error": ""
+        },
+        {
+          "worker_id": 105,
+          "filename": "concurrent_worker_105.dat",
+          "size_bytes": 153600,
+          "write_time_ms": 2.894829958677292,
+          "checksum": "b06a378bbee725396d294fc51c0cd688c02984d776769f7fde11617766e48622",
+          "success": true,
+          "error": ""
+        },
+        {
+          "worker_id": 106,
+          "filename": "concurrent_worker_106.dat",
+          "size_bytes": 153600,
+          "write_time_ms": 2.817319706082344,
+          "checksum": "78c7f15cb228a5b685be59909e54b157b126a6ca39783c663c10eb8bea2fbf32",
+          "success": true,
+          "error": ""
+        },
+        {
+          "worker_id": 107,
+          "filename": "concurrent_worker_107.dat",
+          "size_bytes": 153600,
+          "write_time_ms": 1.9085993990302086,
+          "checksum": "0aec7028c6a7a7a04f899a0e404380e90c7d94c89a4f56b22d3c190cf5408426",
+          "success": true,
+          "error": ""
+        }
+      ]
+    },
+    {
+      "test_type": "process_pool",
+      "workers": 4,
+      "size_kb": 500,
+      "total_time_ms": 15.002027153968811,
+      "successes": 4,
+      "failures": 0,
+      "total_bytes": 2048000,
+      "throughput_mbps": 130.19073888846398,
+      "avg_write_time_ms": 2.7846642769873142,
+      "results": [
+        {
+          "worker_id": 200,
+          "filename": "concurrent_worker_200.dat",
+          "size_bytes": 512000,
+          "write_time_ms": 2.7763694524765015,
+          "checksum": "3b3808682a2a4b41c111db9bb8f67b3d3cc1821169f8fa8b9c079346dacb40f6",
+          "success": true,
+          "error": ""
+        },
+        {
+          "worker_id": 201,
+          "filename": "concurrent_worker_201.dat",
+          "size_bytes": 512000,
+          "write_time_ms": 2.858090214431286,
+          "checksum": "031c33c5e7e6bfd1912b4da560a21c8edef2c5a19a1f61b261b219547b78f93c",
+          "success": true,
+          "error": ""
+        },
+        {
+          "worker_id": 202,
+          "filename": "concurrent_worker_202.dat",
+          "size_bytes": 512000,
+          "write_time_ms": 2.7402397245168686,
+          "checksum": "b4c7544de0daa62cd7d3a74afd422fd88835dc50398e1f7f7427bef0c84993e2",
+          "success": true,
+          "error": ""
+        },
+        {
+          "worker_id": 203,
+          "filename": "concurrent_worker_203.dat",
+          "size_bytes": 512000,
+          "write_time_ms": 2.763957716524601,
+          "checksum": "aa86a19eaac1138dcc3ab9ffbeebe202934f5e63cf220967a666c6ca46654504",
+          "success": true,
+          "error": ""
+        }
+      ]
+    },
+    {
+      "test_type": "rapid_sequential",
+      "num_writes": 20,
+      "size_kb": 50,
+      "total_time_ms": 6.095884367823601,
+      "successes": 20,
+      "failures": 0,
+      "total_bytes": 1024000,
+      "writes_per_second": 3280.9021289130114,
+      "throughput_mbps": 160.20029926333063
+    },
+    {
+      "test_type": "thread_pool",
+      "workers": 15,
+      "size_kb": 300,
+      "total_time_ms": 9.148135781288147,
+      "successes": 15,
+      "failures": 0,
+      "total_bytes": 4608000,
+      "throughput_mbps": 480.37451072695023,
+      "avg_write_time_ms": 4.089932764569919,
+      "results": [
+        {
+          "worker_id": 0,
+          "filename": "concurrent_worker_0.dat",
+          "size_bytes": 307200,
+          "write_time_ms": 4.811621271073818,
+          "checksum": "cad544609281989a21c291b94dbd97bcbb2bc0f0f00330d2cd7df3d284dd2b46",
+          "success": true,
+          "error": ""
+        },
+        {
+          "worker_id": 1,
+          "filename": "concurrent_worker_1.dat",
+          "size_bytes": 307200,
+          "write_time_ms": 3.352454863488674,
+          "checksum": "5e8944125c4802c0aa8fd03fcb8e2303e2a860ffdf05ebf6ca1f4da9d7a45667",
+          "success": true,
+          "error": ""
+        },
+        {
+          "worker_id": 2,
+          "filename": "concurrent_worker_2.dat",
+          "size_bytes": 307200,
+          "write_time_ms": 4.106323234736919,
+          "checksum": "b750e659e02c8e8a2b005a3cf7bf21907aba6e57b6f6f308b03ae78cd446b770",
+          "success": true,
+          "error": ""
+        },
+        {
+          "worker_id": 3,
+          "filename": "concurrent_worker_3.dat",
+          "size_bytes": 307200,
+          "write_time_ms": 6.019683554768562,
+          "checksum": "80c7cf823363102224ae71c140cd741d2056a20af0aedc6384f661cda98cfd84",
+          "success": true,
+          "error": ""
+        },
+        {
+          "worker_id": 4,
+          "filename": "concurrent_worker_4.dat",
+          "size_bytes": 307200,
+          "write_time_ms": 5.157914012670517,
+          "checksum": "2233829a595459bd3fed2d8bd4062e42bc5df47e224a749486bd97698d8ed558",
+          "success": true,
+          "error": ""
+        },
+        {
+          "worker_id": 5,
+          "filename": "concurrent_worker_5.dat",
+          "size_bytes": 307200,
+          "write_time_ms": 4.179974086582661,
+          "checksum": "8c6ef51a56b25114e7c8005bb6aebd1f2be46bbb076e8a91f3ab7837e62fb322",
+          "success": true,
+          "error": ""
+        },
+        {
+          "worker_id": 6,
+          "filename": "concurrent_worker_6.dat",
+          "size_bytes": 307200,
+          "write_time_ms": 4.657259210944176,
+          "checksum": "3cd0e06bd269925ddc23cff5192b0ee5abee1ffcd35e1d2154192a47671bf9ed",
+          "success": true,
+          "error": ""
+        },
+        {
+          "worker_id": 7,
+          "filename": "concurrent_worker_7.dat",
+          "size_bytes": 307200,
+          "write_time_ms": 3.842170350253582,
+          "checksum": "a35bd8d704d2c185991337b6fe916e10aaf2d74c0b54f119abff54388de3c2bb",
+          "success": true,
+          "error": ""
+        },
+        {
+          "worker_id": 8,
+          "filename": "concurrent_worker_8.dat",
+          "size_bytes": 307200,
+          "write_time_ms": 4.636077210307121,
+          "checksum": "18cb4c5bfec5293d2e5e866df587d42a4448f89ce3d82fe90d200fe4bdc21797",
+          "success": true,
+          "error": ""
+        },
+        {
+          "worker_id": 9,
+          "filename": "concurrent_worker_9.dat",
+          "size_bytes": 307200,
+          "write_time_ms": 3.998551517724991,
+          "checksum": "63bf206d1aa7dc89e6bee33a33122c03ff5b14f11976a59c2ad74c05ab5f77b9",
+          "success": true,
+          "error": ""
+        },
+        {
+          "worker_id": 10,
+          "filename": "concurrent_worker_10.dat",
+          "size_bytes": 307200,
+          "write_time_ms": 4.235424101352692,
+          "checksum": "aed8050b844204c895a02666fbe052a6c0e44cbe66a68aaec5822e0e7f11892b",
+          "success": true,
+          "error": ""
+        },
+        {
+          "worker_id": 11,
+          "filename": "concurrent_worker_11.dat",
+          "size_bytes": 307200,
+          "write_time_ms": 3.5027265548706055,
+          "checksum": "e52cceaa715ce4b080a14162b48a964491e2d8aba7e9626b2abea0f90dca9b48",
+          "success": true,
+          "error": ""
+        },
+        {
+          "worker_id": 12,
+          "filename": "concurrent_worker_12.dat",
+          "size_bytes": 307200,
+          "write_time_ms": 3.3559445291757584,
+          "checksum": "dfa1e57616b7eea9418185d51ec18f0940ce0c317b875a9ec3c4575b9164b3f8",
+          "success": true,
+          "error": ""
+        },
+        {
+          "worker_id": 13,
+          "filename": "concurrent_worker_13.dat",
+          "size_bytes": 307200,
+          "write_time_ms": 2.876809798181057,
+          "checksum": "3ebe47379125e55ccb20e6e2f1b78b1f05ea5bd2c39f3c981ddb1bddc8d6a18e",
+          "success": true,
+          "error": ""
+        },
+        {
+          "worker_id": 14,
+          "filename": "concurrent_worker_14.dat",
+          "size_bytes": 307200,
+          "write_time_ms": 2.6160571724176407,
+          "checksum": "cd65225df759ee13848a51b7f2b27822ce1a074738cd27982ece3adb3b0c8a56",
+          "success": true,
+          "error": ""
+        }
+      ]
+    }
+  ],
+  "completed_at": "2026-04-10T17:50:24.459859+00:00",
+  "summary": {
+    "total_tests": 6,
+    "total_operations": 62,
+    "total_successes": 62,
+    "total_failures": 0,
+    "total_bytes_written": 11468800,
+    "success_rate": 100.0,
+    "race_conditions_detected": 0,
+    "corruption_detected": false
+  }
+}

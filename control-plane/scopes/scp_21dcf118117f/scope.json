@@ -1,0 +1,29 @@
+{
+  "scope_id": "scp_21dcf118117f",
+  "name": "Scheduler-Backed Engineer Scope",
+  "type": "engineer",
+  "governed_job": "job_ccf4419b72b4",
+  "worker": "aws-openclaw-3",
+  "created_at": "2026-04-11T02:40:00Z",
+  "scheduler_config": {
+    "max_concurrent_tasks": 4,
+    "priority_queue": true,
+    "timeout_seconds": 3600,
+    "retry_policy": {
+      "max_retries": 3,
+      "backoff_multiplier": 2
+    }
+  },
+  "capabilities": [
+    "code_generation",
+    "artifact_creation",
+    "task_decomposition",
+    "dependency_tracking"
+  ],
+  "resource_limits": {
+    "memory_mb": 4096,
+    "cpu_cores": 2,
+    "storage_mb": 10240
+  },
+  "status": "active"
+}

@@ -23,3 +23,9 @@ sage_sample/InteriorGS_usdz/
 sage_sample/collision/
 sage_sample/inpaint_output/
 sage_sample/*.ply
+
+# Large data files (>100MB GitHub limit)
+cifar-10-python.tar.gz
+*.tar.gz
+control-plane/data/
+control-plane/workspaces/*/data/
