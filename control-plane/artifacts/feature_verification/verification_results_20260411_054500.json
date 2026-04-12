@@ -1,0 +1,47 @@
+{
+  "verification_run_at": "2026-04-11T05:44:35.554779+00:00",
+  "feature": "Governed Job Dispatch to Workers",
+  "worker": "aws-openclaw-6",
+  "task_id": "tsk_6281468ad3b7",
+  "job_id": "job_c6d2104dac7d",
+  "scope_id": "scp_7f42cb44bd0c",
+  "thread_id": "thr_f57c33ae7a46",
+  "tests": [
+    {
+      "name": "scope_creation",
+      "passed": true,
+      "details": "Scope 'Feature Verification Scope' is active"
+    },
+    {
+      "name": "thread_linkage",
+      "passed": true,
+      "details": "Thread 'Feature Verification Thread' linked"
+    },
+    {
+      "name": "task_assignment",
+      "passed": true,
+      "details": "Task assigned to engineer, status: running"
+    },
+    {
+      "name": "governed_job_dispatch",
+      "passed": true,
+      "details": "Job dispatched to aws-openclaw-6"
+    },
+    {
+      "name": "lifecycle_integrity",
+      "passed": true,
+      "details": "Full chain: job -> task -> thread, job -> scope verified"
+    },
+    {
+      "name": "update_tracking",
+      "passed": true,
+      "details": "1 progress update(s) recorded"
+    }
+  ],
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "success": true
+  }
+}
