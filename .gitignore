@@ -29,3 +29,8 @@ cifar-10-python.tar.gz
 *.tar.gz
 control-plane/data/
 control-plane/workspaces/*/data/
+
+# Large artifacts and training outputs (too big for git)
+control-plane/artifacts/
+control-plane/workspaces/*/lerobot_training/
+control-plane/workspaces/*/pusht_benchmark/
