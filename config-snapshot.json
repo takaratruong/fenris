@@ -48,7 +48,8 @@
             "workspaceOnly": true
           },
           "profile": "minimal"
-        }
+        },
+        "skills": []
       },
       {
         "id": "engineer",
@@ -61,11 +62,17 @@
             "control-plane-bridge",
             "exec"
           ],
+          "deny": [
+            "read",
+            "edit",
+            "write"
+          ],
           "fs": {
             "workspaceOnly": true
           },
           "profile": "minimal"
-        }
+        },
+        "skills": []
       },
       {
         "id": "research",
@@ -76,7 +83,6 @@
         "tools": {
           "alsoAllow": [
             "control-plane-bridge",
-            "web_search",
             "web_fetch"
           ],
           "deny": [
@@ -90,14 +96,16 @@
             "workspaceOnly": true
           },
           "profile": "minimal"
-        }
+        },
+        "skills": []
       },
       {
         "id": "orchestrator",
         "name": "orchestrator",
         "workspace": "/home/ubuntu/.openclaw/workspace/control-plane/workspaces/orchestrator",
         "agentDir": "/home/ubuntu/.openclaw/agents/orchestrator/agent",
-        "model": "amazon-bedrock/us.anthropic.claude-opus-4-6-v1"
+        "model": "amazon-bedrock/us.anthropic.claude-opus-4-6-v1",
+        "skills": []
       },
       {
         "id": "bench",
@@ -110,11 +118,17 @@
             "control-plane-bridge",
             "exec"
           ],
+          "deny": [
+            "read",
+            "edit",
+            "write"
+          ],
           "fs": {
             "workspaceOnly": true
           },
           "profile": "minimal"
-        }
+        },
+        "skills": []
       },
       {
         "id": "lab",
@@ -131,7 +145,8 @@
             "workspaceOnly": true
           },
           "profile": "minimal"
-        }
+        },
+        "skills": []
       },
       {
         "id": "ops",
@@ -148,14 +163,16 @@
             "workspaceOnly": true
           },
           "profile": "minimal"
-        }
+        },
+        "skills": []
       },
       {
         "id": "chief_of_staff",
         "name": "chief_of_staff",
         "workspace": "/home/ubuntu/.openclaw/workspace/control-plane/workspaces/chief_of_staff",
         "agentDir": "/home/ubuntu/.openclaw/agents/chief_of_staff/agent",
-        "model": "amazon-bedrock/us.anthropic.claude-opus-4-6-v1"
+        "model": "amazon-bedrock/us.anthropic.claude-opus-4-6-v1",
+        "skills": []
       }
     ]
   },
@@ -172,7 +189,7 @@
       "token": {
         "source": "env",
         "provider": "default",
-        "id": "__REDACTED__"
+        "id": "REDACTED_ENV_REF"
       },
       "groupPolicy": "open",
       "historyLimit": 10,
@@ -194,7 +211,7 @@
     "mode": "local",
     "auth": {
       "mode": "token",
-      "token": "__REDACTED__"
+      "token": "REDACTED"
     }
   },
   "plugins": {
