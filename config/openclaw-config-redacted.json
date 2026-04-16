@@ -3,50 +3,257 @@
     "lastTouchedVersion": "2026.4.9",
     "lastTouchedAt": "2026-04-09T06:23:18.821Z"
   },
+  "wizard": {
+    "lastRunAt": "2026-03-30T17:54:08.099Z",
+    "lastRunVersion": "2026.3.24",
+    "lastRunCommand": "doctor",
+    "lastRunMode": "local"
+  },
   "agents": {
     "defaults": {
       "model": {
-        "primary": "amazon-bedrock/us.anthropic.claude-opus-4-5-20251101-v1:0",
+        "primary": "amazon-bedrock/us.anthropic.claude-opus-4-6-v1",
         "fallbacks": []
       },
+      "models": {
+        "amazon-bedrock/us.anthropic.claude-opus-4-5-20251101-v1:0": {},
+        "amazon-bedrock/us.anthropic.claude-opus-4-6-v1": {}
+      },
       "contextTokens": 100000,
-      "memorySearch": { "enabled": false },
       "compaction": {
-        "mode": "default",
-        "keepRecentTokens": 20000,
-        "maxHistoryShare": 0.3,
-        "recentTurnsPreserve": 5
+        "mode": "safeguard"
+      },
+      "contextPruning": {
+        "mode": "cache-ttl",
+        "ttl": "1h"
+      },
+      "heartbeat": {
+        "every": "30m",
+        "isolatedSession": true,
+        "lightContext": true,
+        "model": "openrouter/minimax/minimax-m2.5:free"
+      },
+      "subagents": {
+        "maxSpawnDepth": 2
       }
     },
     "list": [
-      { "id": "main" },
-      { "id": "dr_fenris", "workspace": "/home/ubuntu/dr_fenris_workspace" },
-      { "id": "engineer", "workspace": "control-plane/workspaces/engineer" },
-      { "id": "research", "workspace": "control-plane/workspaces/research" },
-      { "id": "orchestrator", "workspace": "control-plane/workspaces/orchestrator" },
-      { "id": "bench", "workspace": "control-plane/workspaces/bench" },
-      { "id": "lab", "workspace": "control-plane/workspaces/lab" },
-      { "id": "ops", "workspace": "control-plane/workspaces/ops" },
-      { "id": "chief_of_staff", "workspace": "control-plane/workspaces/chief_of_staff" }
+      {
+        "id": "main"
+      },
+      {
+        "id": "dr_fenris",
+        "name": "dr_fenris",
+        "workspace": "/home/ubuntu/dr_fenris_workspace",
+        "agentDir": "/home/ubuntu/.openclaw/agents/dr_fenris/agent",
+        "model": "amazon-bedrock/us.anthropic.claude-opus-4-6-v1",
+        "tools": {
+          "alsoAllow": [
+            "control-plane-bridge"
+          ],
+          "fs": {
+            "workspaceOnly": true
+          },
+          "profile": "minimal"
+        },
+        "skills": []
+      },
+      {
+        "id": "engineer",
+        "name": "engineer",
+        "workspace": "/home/ubuntu/engineer_workspace",
+        "agentDir": "/home/ubuntu/.openclaw/agents/engineer/agent",
+        "model": "amazon-bedrock/us.anthropic.claude-opus-4-6-v1",
+        "tools": {
+          "alsoAllow": [
+            "control-plane-bridge",
+            "exec"
+          ],
+          "deny": [
+            "read",
+            "edit",
+            "write"
+          ],
+          "fs": {
+            "workspaceOnly": true
+          },
+          "profile": "minimal"
+        },
+        "skills": []
+      },
+      {
+        "id": "research",
+        "name": "research",
+        "workspace": "/home/ubuntu/research_workspace",
+        "agentDir": "/home/ubuntu/.openclaw/agents/research/agent",
+        "model": "amazon-bedrock/us.anthropic.claude-opus-4-6-v1",
+        "tools": {
+          "alsoAllow": [
+            "control-plane-bridge",
+            "web_fetch"
+          ],
+          "deny": [
+            "exec",
+            "process"
+          ],
+          "exec": {
+            "security": "deny"
+          },
+          "fs": {
+            "workspaceOnly": true
+          },
+          "profile": "minimal"
+        },
+        "skills": []
+      },
+      {
+        "id": "orchestrator",
+        "name": "orchestrator",
+        "workspace": "/home/ubuntu/.openclaw/workspace/control-plane/workspaces/orchestrator",
+        "agentDir": "/home/ubuntu/.openclaw/agents/orchestrator/agent",
+        "model": "amazon-bedrock/us.anthropic.claude-opus-4-6-v1",
+        "skills": []
+      },
+      {
+        "id": "bench",
+        "name": "bench",
+        "workspace": "/home/ubuntu/bench_workspace",
+        "agentDir": "/home/ubuntu/.openclaw/agents/bench/agent",
+        "model": "amazon-bedrock/us.anthropic.claude-opus-4-6-v1",
+        "tools": {
+          "alsoAllow": [
+            "control-plane-bridge",
+            "exec"
+          ],
+          "deny": [
+            "read",
+            "edit",
+            "write"
+          ],
+          "fs": {
+            "workspaceOnly": true
+          },
+          "profile": "minimal"
+        },
+        "skills": []
+      },
+      {
+        "id": "lab",
+        "name": "lab",
+        "workspace": "/home/ubuntu/lab_workspace",
+        "agentDir": "/home/ubuntu/.openclaw/agents/lab/agent",
+        "model": "amazon-bedrock/us.anthropic.claude-opus-4-6-v1",
+        "tools": {
+          "alsoAllow": [
+            "control-plane-bridge",
+            "exec"
+          ],
+          "fs": {
+            "workspaceOnly": true
+          },
+          "profile": "minimal"
+        },
+        "skills": []
+      },
+      {
+        "id": "ops",
+        "name": "ops",
+        "workspace": "/home/ubuntu/ops_workspace",
+        "agentDir": "/home/ubuntu/.openclaw/agents/ops/agent",
+        "model": "amazon-bedrock/us.anthropic.claude-opus-4-6-v1",
+        "tools": {
+          "alsoAllow": [
+            "control-plane-bridge",
+            "exec"
+          ],
+          "fs": {
+            "workspaceOnly": true
+          },
+          "profile": "minimal"
+        },
+        "skills": []
+      },
+      {
+        "id": "chief_of_staff",
+        "name": "chief_of_staff",
+        "workspace": "/home/ubuntu/.openclaw/workspace/control-plane/workspaces/chief_of_staff",
+        "agentDir": "/home/ubuntu/.openclaw/agents/chief_of_staff/agent",
+        "model": "amazon-bedrock/us.anthropic.claude-opus-4-6-v1",
+        "skills": []
+      }
     ]
+  },
+  "tools": {},
+  "commands": {
+    "native": "auto",
+    "nativeSkills": "auto",
+    "restart": true,
+    "ownerDisplay": "raw"
   },
   "channels": {
     "discord": {
       "enabled": true,
-      "token": "__REDACTED__",
+      "token": {
+        "source": "env",
+        "provider": "default",
+        "id": "DISCORD_BOT_TOKEN"
+      },
       "groupPolicy": "open",
       "historyLimit": 10,
       "dmHistoryLimit": 10,
-      "streaming": { "mode": "off" }
+      "streaming": {
+        "mode": "off"
+      },
+      "guilds": {
+        "1488245505468141608": {
+          "requireMention": false
+        }
+      },
+      "allowFrom": [
+        "158790414243987456"
+      ]
     }
   },
   "gateway": {
     "mode": "local",
-    "auth": { "mode": "token", "token": "__REDACTED__" }
+    "auth": {
+      "mode": "token",
+      "token": "__REDACTED__"
+    }
   },
   "plugins": {
     "entries": {
-      "amazon-bedrock": { "enabled": true }
+      "amazon-bedrock": {
+        "enabled": true
+      }
+    }
+  },
+  "hooks": {
+    "internal": {
+      "entries": {
+        "boot-md": {
+          "enabled": true
+        },
+        "bootstrap-extra-files": {
+          "enabled": true
+        },
+        "command-logger": {
+          "enabled": true
+        },
+        "session-memory": {
+          "enabled": true
+        }
+      },
+      "enabled": true
+    }
+  },
+  "skills": {},
+  "memory": {
+    "backend": "qmd",
+    "qmd": {
+      "sessions": {
+        "enabled": true
+      }
     }
   }
 }
